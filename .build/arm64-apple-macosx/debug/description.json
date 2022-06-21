@@ -1,0 +1,297 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+    "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator_SlothCreator.bundle/Images.xcassets" : {
+      "inputs" : [
+        {
+          "kind" : "directory",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Resources/Images.xcassets"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "directory",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator_SlothCreator.bundle/Images.xcassets"
+        }
+      ]
+    }
+  },
+  "pluginDescriptions" : [
+    {
+      "package" : "swift-docc-plugin",
+      "productNames" : [
+        "Swift-DocC"
+      ],
+      "sources" : {
+        "relativePaths" : [
+          "SwiftDocCConvert.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/ArgumentExtractor+extractSpecifiedTargets.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/PackageExtensions.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/PluginContext+doccExecutableURL.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/SourceModuleTarget+doccCatalogPath.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/Target+defaultSymbolGraphOptions.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/Target+doccArchiveOutputPath.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/Arguments+outputPath.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/Arguments.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/CommandLineOptions/CommandLineOption.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/CommandLineOptions/RequiredCommandLineOption.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/DispatchTimeInterval+descriptionInSeconds.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/DocumentationTargetKind.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/FoundationExtensions/String+singleQuoted.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/HelpInformation.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/ParsedArguments.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginAction.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/ArgumentsTransforming.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/DisableIndexFlag.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/PluginFlag.swift"
+        ],
+        "root" : "/Users/someshkarthik/tesing-docc/.build/checkouts/swift-docc-plugin/Plugins/Swift-DocC Convert"
+      },
+      "targetName" : "Swift-DocC",
+      "toolsVersion" : {
+        "_version" : "5.6.0"
+      }
+    },
+    {
+      "package" : "swift-docc-plugin",
+      "productNames" : [
+        "Swift-DocC Preview"
+      ],
+      "sources" : {
+        "relativePaths" : [
+          "SwiftDocCPreview.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/ArgumentExtractor+extractSpecifiedTargets.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/PackageExtensions.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/PluginContext+doccExecutableURL.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/SourceModuleTarget+doccCatalogPath.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/Target+defaultSymbolGraphOptions.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/Target+doccArchiveOutputPath.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/Arguments+outputPath.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/Arguments.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/CommandLineOptions/CommandLineOption.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/CommandLineOptions/RequiredCommandLineOption.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/DispatchTimeInterval+descriptionInSeconds.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/DocumentationTargetKind.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/FoundationExtensions/String+singleQuoted.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/HelpInformation.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/ParsedArguments.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginAction.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/ArgumentsTransforming.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/DisableIndexFlag.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/PluginFlag.swift"
+        ],
+        "root" : "/Users/someshkarthik/tesing-docc/.build/checkouts/swift-docc-plugin/Plugins/Swift-DocC Preview"
+      },
+      "targetName" : "Swift-DocC Preview",
+      "toolsVersion" : {
+        "_version" : "5.6.0"
+      }
+    }
+  ],
+  "swiftCommands" : {
+    "C.SlothCreator-debug.module" : {
+      "executable" : "/Applications/Xcode Dev.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/Activity.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/CareSchedule.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/FoodGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Creation/NameGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Creation/SlothGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Color.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Food.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Habitat.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Power.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Sloth.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/HabitatView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/PowerPicker.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/SlothView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/DerivedSources/resource_bundle_accessor.swift"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<SlothCreator-debug.module-resources>"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SlothCreator",
+      "moduleOutputPath" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.swiftmodule",
+      "objects" : [
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/Activity.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/CareSchedule.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/FoodGenerator.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/NameGenerator.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/SlothGenerator.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Color.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Food.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Habitat.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Power.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Sloth.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/HabitatView.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/PowerPicker.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/SlothView.swift.o",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/resource_bundle_accessor.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx11.0",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/SlothCreator-Swift.h",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode Dev.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode Dev.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode Dev.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode Dev.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/Activity.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/CareSchedule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/FoodGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/NameGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/SlothGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Color.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Food.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Habitat.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Power.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Sloth.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/HabitatView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/PowerPicker.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/SlothView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/Activity.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/CareSchedule.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/FoodGenerator.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Creation/NameGenerator.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Creation/SlothGenerator.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Color.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Food.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Habitat.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Power.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Sloth.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/HabitatView.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/PowerPicker.swift",
+        "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/SlothView.swift",
+        "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/DerivedSources/resource_bundle_accessor.swift"
+      ],
+      "tempsPath" : "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

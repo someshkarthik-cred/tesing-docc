@@ -1,0 +1,89 @@
+{
+  "": {
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/master.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/Activity.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/Activity.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/Activity.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/Activity~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/Activity.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/CareSchedule.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/CareSchedule.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/CareSchedule.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/CareSchedule~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/CareSchedule.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/FoodGenerator.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/FoodGenerator.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/FoodGenerator.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/FoodGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Care/FoodGenerator.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Creation/NameGenerator.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/NameGenerator.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/NameGenerator.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/NameGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/NameGenerator.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Creation/SlothGenerator.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/SlothGenerator.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/SlothGenerator.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/SlothGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Creation/SlothGenerator.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Color.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Color.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Color.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Color~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Color.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Food.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Food.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Food.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Food~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Food.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Habitat.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Habitat.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Habitat.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Habitat~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Habitat.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Power.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Power.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Power.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Power~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Power.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Sloth.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Sloth.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Sloth.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Sloth~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Models/Sloth.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/HabitatView.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/HabitatView.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/HabitatView.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/HabitatView~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/HabitatView.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/PowerPicker.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/PowerPicker.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/PowerPicker.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/PowerPicker~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/PowerPicker.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/SlothView.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/SlothView.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/SlothView.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/SlothView~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/Viewing/SlothView.swiftdeps"
+  },
+  "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/resource_bundle_accessor.d",
+    "object": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/resource_bundle_accessor.swiftdeps"
+  }
+}

@@ -1,0 +1,20 @@
+version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
+options: "8f91f5c080ee05dfa082fbbdc06113a444cc9a4781f02ab54a8aa8fd08142ceb"
+build_start_time: [1655834200, 829111099]
+build_end_time: [1655834206, 375810146]
+inputs:
+  ? "/Users/someshkarthik/tesing-docc/.build/arm64-apple-macosx/debug/SlothCreator.build/DerivedSources/resource_bundle_accessor.swift"
+  : [1655834200, 717932701]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/Activity.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/CareSchedule.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Care/FoodGenerator.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Creation/NameGenerator.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Creation/SlothGenerator.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Color.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Food.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Habitat.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Power.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Models/Sloth.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/HabitatView.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/PowerPicker.swift": [1653293256, 0]
+  "/Users/someshkarthik/tesing-docc/Sources/SlothCreator/Viewing/SlothView.swift": [1653293256, 0]

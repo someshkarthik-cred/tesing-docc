@@ -10,5 +10,18 @@
 			<integer>0</integer>
 		</dict>
 	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>SlothCreator</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>SlothCreator_SlothCreator</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -1,0 +1,24 @@
+# pack-refs with: peeled fully-peeled sorted 
+ae7f9188982f95aef1bd3cf34e90a9c3aa08d61a refs/heads/franklinsch-patch-1
+b932edbd8e82974e2d46cfea674e228aa1966ca4 refs/heads/gh-pages
+b634a8d58a8484bbe5724efa64fc4b91124828f2 refs/heads/main
+3303b164430d9a7055ba484c8ead67a52f7b74f6 refs/heads/release/1.0
+c589b0a639217d005c503c62b43f9f773b1303b5 refs/pull/1/head
+c81f57a1e2c1edeb07a4952cacdfbc51c75e54cb refs/pull/10/head
+31df89dfd5fbc4f9b23342abbc7206bf2ed19c29 refs/pull/15/head
+05c72a1a5ec8beee7d978f50565ed360a42b9ac9 refs/pull/16/head
+755d3992ac4f67cf1aee6c9f4d99f645c5e50372 refs/pull/16/merge
+889427c21aa87f87fd32a57c886ec6f203df37c2 refs/pull/17/head
+9f4321e4004ff05a603edb409bd46482c35c7476 refs/pull/17/merge
+553fde5cbb3a1e0ea9acb01b3e34f82d4db9539a refs/pull/18/head
+81c776a2d6149c96bad6d0369c6a4c253b08b002 refs/pull/18/merge
+2d5eb5d7d0d831d0569414bd2f11e29beffbb0c5 refs/pull/2/head
+bbbe320221fe40f527918d3b3bbc61a7c18bef5e refs/pull/3/head
+16017355a57ebacada2ca8517e62c450972b98ca refs/pull/4/head
+843bbd48ce3fb038ade70d131eb8fba924324047 refs/pull/5/head
+ad762c0fdc27af3bb5346b7ac20b063eacfd711e refs/pull/6/head
+9d25025c1f44c3287f52229cc910e283bf87db1d refs/pull/7/head
+ae7f9188982f95aef1bd3cf34e90a9c3aa08d61a refs/pull/8/head
+3af1645e340bc2027db36b5560450d3d51976973 refs/pull/9/head
+8c02fd0cfe2ee3952a777d950775fa0a7207dc9b refs/tags/1.0.0
+^3303b164430d9a7055ba484c8ead67a52f7b74f6

@@ -1,0 +1,4850 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "TypeDecl",
+      "name": "Activity",
+      "printedName": "Activity",
+      "children": [
+        {
+          "kind": "Function",
+          "name": "perform",
+          "printedName": "perform(with:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Speed",
+              "printedName": "SlothCreator.Speed",
+              "usr": "s:12SlothCreator5SpeedO"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Sloth",
+              "printedName": "SlothCreator.Sloth",
+              "paramValueOwnership": "InOut",
+              "usr": "s:12SlothCreator0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:12SlothCreator8ActivityP7perform4withAA5SpeedOAA0A0Vz_tF",
+          "mangledName": "$s12SlothCreator8ActivityP7perform4withAA5SpeedOAA0A0Vz_tF",
+          "moduleName": "SlothCreator",
+          "genericSig": "<τ_0_0 where τ_0_0 : SlothCreator.Activity>",
+          "sugared_genericSig": "<Self where Self : SlothCreator.Activity>",
+          "protocolReq": true,
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "reqNewWitnessTableEntry": true,
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Protocol",
+      "usr": "s:12SlothCreator8ActivityP",
+      "mangledName": "$s12SlothCreator8ActivityP",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "Speed",
+      "printedName": "Speed",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "slow",
+          "printedName": "slow",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(SlothCreator.Speed.Type) -> SlothCreator.Speed",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Speed",
+                  "printedName": "SlothCreator.Speed",
+                  "usr": "s:12SlothCreator5SpeedO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "SlothCreator.Speed.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Speed",
+                      "printedName": "SlothCreator.Speed",
+                      "usr": "s:12SlothCreator5SpeedO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:12SlothCreator5SpeedO4slowyA2CmF",
+          "mangledName": "$s12SlothCreator5SpeedO4slowyA2CmF",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 0
+        },
+        {
+          "kind": "Var",
+          "name": "medium",
+          "printedName": "medium",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(SlothCreator.Speed.Type) -> SlothCreator.Speed",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Speed",
+                  "printedName": "SlothCreator.Speed",
+                  "usr": "s:12SlothCreator5SpeedO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "SlothCreator.Speed.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Speed",
+                      "printedName": "SlothCreator.Speed",
+                      "usr": "s:12SlothCreator5SpeedO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:12SlothCreator5SpeedO6mediumyA2CmF",
+          "mangledName": "$s12SlothCreator5SpeedO6mediumyA2CmF",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 1
+        },
+        {
+          "kind": "Var",
+          "name": "fast",
+          "printedName": "fast",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(SlothCreator.Speed.Type) -> SlothCreator.Speed",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Speed",
+                  "printedName": "SlothCreator.Speed",
+                  "usr": "s:12SlothCreator5SpeedO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "SlothCreator.Speed.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Speed",
+                      "printedName": "SlothCreator.Speed",
+                      "usr": "s:12SlothCreator5SpeedO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:12SlothCreator5SpeedO4fastyA2CmF",
+          "mangledName": "$s12SlothCreator5SpeedO4fastyA2CmF",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 2
+        },
+        {
+          "kind": "Var",
+          "name": "supersonic",
+          "printedName": "supersonic",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(SlothCreator.Speed.Type) -> SlothCreator.Speed",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Speed",
+                  "printedName": "SlothCreator.Speed",
+                  "usr": "s:12SlothCreator5SpeedO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "SlothCreator.Speed.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Speed",
+                      "printedName": "SlothCreator.Speed",
+                      "usr": "s:12SlothCreator5SpeedO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:12SlothCreator5SpeedO10supersonicyA2CmF",
+          "mangledName": "$s12SlothCreator5SpeedO10supersonicyA2CmF",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 3
+        },
+        {
+          "kind": "Function",
+          "name": "__derived_enum_equals",
+          "printedName": "__derived_enum_equals(_:_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Speed",
+              "printedName": "SlothCreator.Speed",
+              "usr": "s:12SlothCreator5SpeedO"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Speed",
+              "printedName": "SlothCreator.Speed",
+              "usr": "s:12SlothCreator5SpeedO"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:12SlothCreator5SpeedO21__derived_enum_equalsySbAC_ACtFZ",
+          "mangledName": "$s12SlothCreator5SpeedO21__derived_enum_equalsySbAC_ACtFZ",
+          "moduleName": "SlothCreator",
+          "static": true,
+          "implicit": true,
+          "declAttributes": [
+            "Implements"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "hashValue",
+          "printedName": "hashValue",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator5SpeedO9hashValueSivp",
+          "mangledName": "$s12SlothCreator5SpeedO9hashValueSivp",
+          "moduleName": "SlothCreator",
+          "implicit": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator5SpeedO9hashValueSivg",
+              "mangledName": "$s12SlothCreator5SpeedO9hashValueSivg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "hash",
+          "printedName": "hash(into:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Hasher",
+              "printedName": "Swift.Hasher",
+              "paramValueOwnership": "InOut",
+              "usr": "s:s6HasherV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:12SlothCreator5SpeedO4hash4intoys6HasherVz_tF",
+          "mangledName": "$s12SlothCreator5SpeedO4hash4intoys6HasherVz_tF",
+          "moduleName": "SlothCreator",
+          "implicit": true,
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Enum",
+      "usr": "s:12SlothCreator5SpeedO",
+      "mangledName": "$s12SlothCreator5SpeedO",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "isEnumExhaustive": true,
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "CareSchedule",
+      "printedName": "CareSchedule",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "events",
+          "printedName": "events",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[(Foundation.Date, SlothCreator.CareSchedule.Event)]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Tuple",
+                  "printedName": "(Foundation.Date, SlothCreator.CareSchedule.Event)",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Date",
+                      "printedName": "Foundation.Date",
+                      "usr": "s:10Foundation4DateV"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Event",
+                      "printedName": "SlothCreator.CareSchedule.Event",
+                      "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator12CareScheduleV6eventsSay10Foundation4DateV_AC5EventOtGvp",
+          "mangledName": "$s12SlothCreator12CareScheduleV6eventsSay10Foundation4DateV_AC5EventOtGvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[(Foundation.Date, SlothCreator.CareSchedule.Event)]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Tuple",
+                      "printedName": "(Foundation.Date, SlothCreator.CareSchedule.Event)",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Date",
+                          "printedName": "Foundation.Date",
+                          "usr": "s:10Foundation4DateV"
+                        },
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Event",
+                          "printedName": "SlothCreator.CareSchedule.Event",
+                          "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                        }
+                      ]
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator12CareScheduleV6eventsSay10Foundation4DateV_AC5EventOtGvg",
+              "mangledName": "$s12SlothCreator12CareScheduleV6eventsSay10Foundation4DateV_AC5EventOtGvg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[(Foundation.Date, SlothCreator.CareSchedule.Event)]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Tuple",
+                      "printedName": "(Foundation.Date, SlothCreator.CareSchedule.Event)",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Date",
+                          "printedName": "Foundation.Date",
+                          "usr": "s:10Foundation4DateV"
+                        },
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Event",
+                          "printedName": "SlothCreator.CareSchedule.Event",
+                          "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                        }
+                      ]
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator12CareScheduleV6eventsSay10Foundation4DateV_AC5EventOtGvs",
+              "mangledName": "$s12SlothCreator12CareScheduleV6eventsSay10Foundation4DateV_AC5EventOtGvs",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator12CareScheduleV6eventsSay10Foundation4DateV_AC5EventOtGvM",
+              "mangledName": "$s12SlothCreator12CareScheduleV6eventsSay10Foundation4DateV_AC5EventOtGvM",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "Event",
+          "printedName": "Event",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "breakfast",
+              "printedName": "breakfast",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.CareSchedule.Event.Type) -> SlothCreator.CareSchedule.Event",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Event",
+                      "printedName": "SlothCreator.CareSchedule.Event",
+                      "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.CareSchedule.Event.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Event",
+                          "printedName": "SlothCreator.CareSchedule.Event",
+                          "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator12CareScheduleV5EventO9breakfastyA2EmF",
+              "mangledName": "$s12SlothCreator12CareScheduleV5EventO9breakfastyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 0
+            },
+            {
+              "kind": "Var",
+              "name": "lunch",
+              "printedName": "lunch",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.CareSchedule.Event.Type) -> SlothCreator.CareSchedule.Event",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Event",
+                      "printedName": "SlothCreator.CareSchedule.Event",
+                      "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.CareSchedule.Event.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Event",
+                          "printedName": "SlothCreator.CareSchedule.Event",
+                          "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator12CareScheduleV5EventO5lunchyA2EmF",
+              "mangledName": "$s12SlothCreator12CareScheduleV5EventO5lunchyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 1
+            },
+            {
+              "kind": "Var",
+              "name": "dinner",
+              "printedName": "dinner",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.CareSchedule.Event.Type) -> SlothCreator.CareSchedule.Event",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Event",
+                      "printedName": "SlothCreator.CareSchedule.Event",
+                      "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.CareSchedule.Event.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Event",
+                          "printedName": "SlothCreator.CareSchedule.Event",
+                          "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator12CareScheduleV5EventO6dinneryA2EmF",
+              "mangledName": "$s12SlothCreator12CareScheduleV5EventO6dinneryA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 2
+            },
+            {
+              "kind": "Var",
+              "name": "bedtime",
+              "printedName": "bedtime",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.CareSchedule.Event.Type) -> SlothCreator.CareSchedule.Event",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Event",
+                      "printedName": "SlothCreator.CareSchedule.Event",
+                      "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.CareSchedule.Event.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Event",
+                          "printedName": "SlothCreator.CareSchedule.Event",
+                          "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator12CareScheduleV5EventO7bedtimeyA2EmF",
+              "mangledName": "$s12SlothCreator12CareScheduleV5EventO7bedtimeyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 3
+            },
+            {
+              "kind": "Var",
+              "name": "activity",
+              "printedName": "activity",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.CareSchedule.Event.Type) -> (SlothCreator.Activity) -> SlothCreator.CareSchedule.Event",
+                  "children": [
+                    {
+                      "kind": "TypeFunc",
+                      "name": "Function",
+                      "printedName": "(SlothCreator.Activity) -> SlothCreator.CareSchedule.Event",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Event",
+                          "printedName": "SlothCreator.CareSchedule.Event",
+                          "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                        },
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Activity",
+                          "printedName": "SlothCreator.Activity",
+                          "usr": "s:12SlothCreator8ActivityP"
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.CareSchedule.Event.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Event",
+                          "printedName": "SlothCreator.CareSchedule.Event",
+                          "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator12CareScheduleV5EventO8activityyAeA8Activity_pcAEmF",
+              "mangledName": "$s12SlothCreator12CareScheduleV5EventO8activityyAeA8Activity_pcAEmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 4
+            }
+          ],
+          "declKind": "Enum",
+          "usr": "s:12SlothCreator12CareScheduleV5EventO",
+          "mangledName": "$s12SlothCreator12CareScheduleV5EventO",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "isEnumExhaustive": true
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(events:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CareSchedule",
+              "printedName": "SlothCreator.CareSchedule",
+              "usr": "s:12SlothCreator12CareScheduleV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[(Foundation.Date, SlothCreator.CareSchedule.Event)]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Tuple",
+                  "printedName": "(Foundation.Date, SlothCreator.CareSchedule.Event)",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Date",
+                      "printedName": "Foundation.Date",
+                      "usr": "s:10Foundation4DateV"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Event",
+                      "printedName": "SlothCreator.CareSchedule.Event",
+                      "usr": "s:12SlothCreator12CareScheduleV5EventO"
+                    }
+                  ]
+                }
+              ],
+              "hasDefaultArg": true,
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:12SlothCreator12CareScheduleV6eventsACSay10Foundation4DateV_AC5EventOtG_tcfc",
+          "mangledName": "$s12SlothCreator12CareScheduleV6eventsACSay10Foundation4DateV_AC5EventOtG_tcfc",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:12SlothCreator12CareScheduleV",
+      "mangledName": "$s12SlothCreator12CareScheduleV",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "FoodGenerator",
+      "printedName": "FoodGenerator",
+      "children": [
+        {
+          "kind": "Function",
+          "name": "generateFood",
+          "printedName": "generateFood(in:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Food",
+              "printedName": "SlothCreator.Sloth.Food",
+              "usr": "s:12SlothCreator0A0V4FoodV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Habitat",
+              "printedName": "SlothCreator.Habitat",
+              "usr": "s:12SlothCreator7HabitatV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:12SlothCreator13FoodGeneratorP08generateC02inAA0A0V0C0VAA7HabitatV_tF",
+          "mangledName": "$s12SlothCreator13FoodGeneratorP08generateC02inAA0A0V0C0VAA7HabitatV_tF",
+          "moduleName": "SlothCreator",
+          "genericSig": "<τ_0_0 where τ_0_0 : SlothCreator.FoodGenerator>",
+          "sugared_genericSig": "<Self where Self : SlothCreator.FoodGenerator>",
+          "protocolReq": true,
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "reqNewWitnessTableEntry": true,
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Protocol",
+      "usr": "s:12SlothCreator13FoodGeneratorP",
+      "mangledName": "$s12SlothCreator13FoodGeneratorP",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "NameGenerator",
+      "printedName": "NameGenerator",
+      "children": [
+        {
+          "kind": "Function",
+          "name": "generateName",
+          "printedName": "generateName(seed:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:12SlothCreator13NameGeneratorP08generateC04seedSSSi_tF",
+          "mangledName": "$s12SlothCreator13NameGeneratorP08generateC04seedSSSi_tF",
+          "moduleName": "SlothCreator",
+          "genericSig": "<τ_0_0 where τ_0_0 : SlothCreator.NameGenerator>",
+          "sugared_genericSig": "<Self where Self : SlothCreator.NameGenerator>",
+          "protocolReq": true,
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "reqNewWitnessTableEntry": true,
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Protocol",
+      "usr": "s:12SlothCreator13NameGeneratorP",
+      "mangledName": "$s12SlothCreator13NameGeneratorP",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "SlothGenerator",
+      "printedName": "SlothGenerator",
+      "children": [
+        {
+          "kind": "Function",
+          "name": "generateSloth",
+          "printedName": "generateSloth(in:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Sloth",
+              "printedName": "SlothCreator.Sloth",
+              "usr": "s:12SlothCreator0A0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Habitat",
+              "printedName": "SlothCreator.Habitat",
+              "usr": "s:12SlothCreator7HabitatV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:12SlothCreator0A9GeneratorP08generateA02inAA0A0VAA7HabitatV_tKF",
+          "mangledName": "$s12SlothCreator0A9GeneratorP08generateA02inAA0A0VAA7HabitatV_tKF",
+          "moduleName": "SlothCreator",
+          "genericSig": "<τ_0_0 where τ_0_0 : SlothCreator.SlothGenerator>",
+          "sugared_genericSig": "<Self where Self : SlothCreator.SlothGenerator>",
+          "protocolReq": true,
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "reqNewWitnessTableEntry": true,
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Protocol",
+      "usr": "s:12SlothCreator0A9GeneratorP",
+      "mangledName": "$s12SlothCreator0A9GeneratorP",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "Habitat",
+      "printedName": "Habitat",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "isHumid",
+          "printedName": "isHumid",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator7HabitatV7isHumidSbvp",
+          "mangledName": "$s12SlothCreator7HabitatV7isHumidSbvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator7HabitatV7isHumidSbvg",
+              "mangledName": "$s12SlothCreator7HabitatV7isHumidSbvg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator7HabitatV7isHumidSbvs",
+              "mangledName": "$s12SlothCreator7HabitatV7isHumidSbvs",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator7HabitatV7isHumidSbvM",
+              "mangledName": "$s12SlothCreator7HabitatV7isHumidSbvM",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isWarm",
+          "printedName": "isWarm",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator7HabitatV6isWarmSbvp",
+          "mangledName": "$s12SlothCreator7HabitatV6isWarmSbvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator7HabitatV6isWarmSbvg",
+              "mangledName": "$s12SlothCreator7HabitatV6isWarmSbvg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator7HabitatV6isWarmSbvs",
+              "mangledName": "$s12SlothCreator7HabitatV6isWarmSbvs",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator7HabitatV6isWarmSbvM",
+              "mangledName": "$s12SlothCreator7HabitatV6isWarmSbvM",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "comfortLevel",
+          "printedName": "comfortLevel",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator7HabitatV12comfortLevelSivp",
+          "mangledName": "$s12SlothCreator7HabitatV12comfortLevelSivp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator7HabitatV12comfortLevelSivg",
+              "mangledName": "$s12SlothCreator7HabitatV12comfortLevelSivg",
+              "moduleName": "SlothCreator",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(isHumid:isWarm:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Habitat",
+              "printedName": "SlothCreator.Habitat",
+              "usr": "s:12SlothCreator7HabitatV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:12SlothCreator7HabitatV7isHumid0D4WarmACSb_Sbtcfc",
+          "mangledName": "$s12SlothCreator7HabitatV7isHumid0D4WarmACSb_Sbtcfc",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:12SlothCreator7HabitatV",
+      "mangledName": "$s12SlothCreator7HabitatV",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "Sloth",
+      "printedName": "Sloth",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "name",
+          "printedName": "name",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A0V4nameSSvp",
+          "mangledName": "$s12SlothCreator0A0V4nameSSvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V4nameSSvg",
+              "mangledName": "$s12SlothCreator0A0V4nameSSvg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V4nameSSvs",
+              "mangledName": "$s12SlothCreator0A0V4nameSSvs",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V4nameSSvM",
+              "mangledName": "$s12SlothCreator0A0V4nameSSvM",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "color",
+          "printedName": "color",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Color",
+              "printedName": "SlothCreator.Sloth.Color",
+              "usr": "s:12SlothCreator0A0V5ColorO"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A0V5colorAC5ColorOvp",
+          "mangledName": "$s12SlothCreator0A0V5colorAC5ColorOvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Color",
+                  "printedName": "SlothCreator.Sloth.Color",
+                  "usr": "s:12SlothCreator0A0V5ColorO"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V5colorAC5ColorOvg",
+              "mangledName": "$s12SlothCreator0A0V5colorAC5ColorOvg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Color",
+                  "printedName": "SlothCreator.Sloth.Color",
+                  "usr": "s:12SlothCreator0A0V5ColorO"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V5colorAC5ColorOvs",
+              "mangledName": "$s12SlothCreator0A0V5colorAC5ColorOvs",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V5colorAC5ColorOvM",
+              "mangledName": "$s12SlothCreator0A0V5colorAC5ColorOvM",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "power",
+          "printedName": "power",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Power",
+              "printedName": "SlothCreator.Sloth.Power",
+              "usr": "s:12SlothCreator0A0V5PowerO"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A0V5powerAC5PowerOvp",
+          "mangledName": "$s12SlothCreator0A0V5powerAC5PowerOvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 2,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Power",
+                  "printedName": "SlothCreator.Sloth.Power",
+                  "usr": "s:12SlothCreator0A0V5PowerO"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V5powerAC5PowerOvg",
+              "mangledName": "$s12SlothCreator0A0V5powerAC5PowerOvg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Power",
+                  "printedName": "SlothCreator.Sloth.Power",
+                  "usr": "s:12SlothCreator0A0V5PowerO"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V5powerAC5PowerOvs",
+              "mangledName": "$s12SlothCreator0A0V5powerAC5PowerOvs",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V5powerAC5PowerOvM",
+              "mangledName": "$s12SlothCreator0A0V5powerAC5PowerOvM",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "energyLevel",
+          "printedName": "energyLevel",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A0V11energyLevelSivp",
+          "mangledName": "$s12SlothCreator0A0V11energyLevelSivp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 3,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V11energyLevelSivg",
+              "mangledName": "$s12SlothCreator0A0V11energyLevelSivg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V11energyLevelSivs",
+              "mangledName": "$s12SlothCreator0A0V11energyLevelSivs",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V11energyLevelSivM",
+              "mangledName": "$s12SlothCreator0A0V11energyLevelSivM",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "schedule",
+          "printedName": "schedule",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CareSchedule",
+              "printedName": "SlothCreator.CareSchedule",
+              "usr": "s:12SlothCreator12CareScheduleV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A0V8scheduleAA12CareScheduleVvp",
+          "mangledName": "$s12SlothCreator0A0V8scheduleAA12CareScheduleVvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 4,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "CareSchedule",
+                  "printedName": "SlothCreator.CareSchedule",
+                  "usr": "s:12SlothCreator12CareScheduleV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V8scheduleAA12CareScheduleVvg",
+              "mangledName": "$s12SlothCreator0A0V8scheduleAA12CareScheduleVvg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "CareSchedule",
+                  "printedName": "SlothCreator.CareSchedule",
+                  "usr": "s:12SlothCreator12CareScheduleV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V8scheduleAA12CareScheduleVvs",
+              "mangledName": "$s12SlothCreator0A0V8scheduleAA12CareScheduleVvs",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A0V8scheduleAA12CareScheduleVvM",
+              "mangledName": "$s12SlothCreator0A0V8scheduleAA12CareScheduleVvM",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(name:color:power:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Sloth",
+              "printedName": "SlothCreator.Sloth",
+              "usr": "s:12SlothCreator0A0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Color",
+              "printedName": "SlothCreator.Sloth.Color",
+              "usr": "s:12SlothCreator0A0V5ColorO"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Power",
+              "printedName": "SlothCreator.Sloth.Power",
+              "usr": "s:12SlothCreator0A0V5PowerO"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:12SlothCreator0A0V4name5color5powerACSS_AC5ColorOAC5PowerOtcfc",
+          "mangledName": "$s12SlothCreator0A0V4name5color5powerACSS_AC5ColorOAC5PowerOtcfc",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "eat",
+          "printedName": "eat(_:quantity:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Food",
+              "printedName": "SlothCreator.Sloth.Food",
+              "usr": "s:12SlothCreator0A0V4FoodV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "hasDefaultArg": true,
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:12SlothCreator0A0V3eat_8quantitySiAC4FoodV_SitF",
+          "mangledName": "$s12SlothCreator0A0V3eat_8quantitySiAC4FoodV_SitF",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "Mutating",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "Mutating"
+        },
+        {
+          "kind": "Function",
+          "name": "sleep",
+          "printedName": "sleep(in:for:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Habitat",
+              "printedName": "SlothCreator.Habitat",
+              "usr": "s:12SlothCreator7HabitatV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "hasDefaultArg": true,
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:12SlothCreator0A0V5sleep2in3forSiAA7HabitatV_SitF",
+          "mangledName": "$s12SlothCreator0A0V5sleep2in3forSiAA7HabitatV_SitF",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "Mutating",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "Mutating"
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "Color",
+          "printedName": "Color",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "green",
+              "printedName": "green",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.Sloth.Color.Type) -> SlothCreator.Sloth.Color",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Color",
+                      "printedName": "SlothCreator.Sloth.Color",
+                      "usr": "s:12SlothCreator0A0V5ColorO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.Sloth.Color.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Color",
+                          "printedName": "SlothCreator.Sloth.Color",
+                          "usr": "s:12SlothCreator0A0V5ColorO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator0A0V5ColorO5greenyA2EmF",
+              "mangledName": "$s12SlothCreator0A0V5ColorO5greenyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 0
+            },
+            {
+              "kind": "Var",
+              "name": "yellow",
+              "printedName": "yellow",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.Sloth.Color.Type) -> SlothCreator.Sloth.Color",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Color",
+                      "printedName": "SlothCreator.Sloth.Color",
+                      "usr": "s:12SlothCreator0A0V5ColorO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.Sloth.Color.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Color",
+                          "printedName": "SlothCreator.Sloth.Color",
+                          "usr": "s:12SlothCreator0A0V5ColorO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator0A0V5ColorO6yellowyA2EmF",
+              "mangledName": "$s12SlothCreator0A0V5ColorO6yellowyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 1
+            },
+            {
+              "kind": "Var",
+              "name": "orange",
+              "printedName": "orange",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.Sloth.Color.Type) -> SlothCreator.Sloth.Color",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Color",
+                      "printedName": "SlothCreator.Sloth.Color",
+                      "usr": "s:12SlothCreator0A0V5ColorO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.Sloth.Color.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Color",
+                          "printedName": "SlothCreator.Sloth.Color",
+                          "usr": "s:12SlothCreator0A0V5ColorO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator0A0V5ColorO6orangeyA2EmF",
+              "mangledName": "$s12SlothCreator0A0V5ColorO6orangeyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 2
+            },
+            {
+              "kind": "Var",
+              "name": "blue",
+              "printedName": "blue",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.Sloth.Color.Type) -> SlothCreator.Sloth.Color",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Color",
+                      "printedName": "SlothCreator.Sloth.Color",
+                      "usr": "s:12SlothCreator0A0V5ColorO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.Sloth.Color.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Color",
+                          "printedName": "SlothCreator.Sloth.Color",
+                          "usr": "s:12SlothCreator0A0V5ColorO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator0A0V5ColorO4blueyA2EmF",
+              "mangledName": "$s12SlothCreator0A0V5ColorO4blueyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 3
+            },
+            {
+              "kind": "Var",
+              "name": "description",
+              "printedName": "description",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:12SlothCreator0A0V5ColorO11descriptionSSvp",
+              "mangledName": "$s12SlothCreator0A0V5ColorO11descriptionSSvp",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "AccessControl"
+              ],
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:12SlothCreator0A0V5ColorO11descriptionSSvg",
+                  "mangledName": "$s12SlothCreator0A0V5ColorO11descriptionSSvg",
+                  "moduleName": "SlothCreator",
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Constructor",
+              "name": "init",
+              "printedName": "init(rawValue:)",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "SlothCreator.Sloth.Color?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Color",
+                      "printedName": "SlothCreator.Sloth.Color",
+                      "usr": "s:12SlothCreator0A0V5ColorO"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Constructor",
+              "usr": "s:12SlothCreator0A0V5ColorO8rawValueAESgSS_tcfc",
+              "mangledName": "$s12SlothCreator0A0V5ColorO8rawValueAESgSS_tcfc",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Inlinable"
+              ],
+              "init_kind": "Designated"
+            },
+            {
+              "kind": "Var",
+              "name": "rawValue",
+              "printedName": "rawValue",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:12SlothCreator0A0V5ColorO8rawValueSSvp",
+              "mangledName": "$s12SlothCreator0A0V5ColorO8rawValueSSvp",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:12SlothCreator0A0V5ColorO8rawValueSSvg",
+                  "mangledName": "$s12SlothCreator0A0V5ColorO8rawValueSSvg",
+                  "moduleName": "SlothCreator",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Inlinable"
+                  ],
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "allCases",
+              "printedName": "allCases",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[SlothCreator.Sloth.Color]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Color",
+                      "printedName": "SlothCreator.Sloth.Color",
+                      "usr": "s:12SlothCreator0A0V5ColorO"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:12SlothCreator0A0V5ColorO8allCasesSayAEGvpZ",
+              "mangledName": "$s12SlothCreator0A0V5ColorO8allCasesSayAEGvpZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[SlothCreator.Sloth.Color]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Color",
+                          "printedName": "SlothCreator.Sloth.Color",
+                          "usr": "s:12SlothCreator0A0V5ColorO"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:12SlothCreator0A0V5ColorO8allCasesSayAEGvgZ",
+                  "mangledName": "$s12SlothCreator0A0V5ColorO8allCasesSayAEGvgZ",
+                  "moduleName": "SlothCreator",
+                  "static": true,
+                  "implicit": true,
+                  "accessorKind": "get"
+                }
+              ]
+            }
+          ],
+          "declKind": "Enum",
+          "usr": "s:12SlothCreator0A0V5ColorO",
+          "mangledName": "$s12SlothCreator0A0V5ColorO",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "enumRawTypeName": "String",
+          "isEnumExhaustive": true,
+          "conformances": [
+            {
+              "kind": "Conformance",
+              "name": "Equatable",
+              "printedName": "Equatable",
+              "usr": "s:SQ",
+              "mangledName": "$sSQ"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Hashable",
+              "printedName": "Hashable",
+              "usr": "s:SH",
+              "mangledName": "$sSH"
+            },
+            {
+              "kind": "Conformance",
+              "name": "RawRepresentable",
+              "printedName": "RawRepresentable",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "RawValue",
+                  "printedName": "RawValue",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:SY",
+              "mangledName": "$sSY"
+            },
+            {
+              "kind": "Conformance",
+              "name": "CaseIterable",
+              "printedName": "CaseIterable",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "AllCases",
+                  "printedName": "AllCases",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[SlothCreator.Sloth.Color]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Color",
+                          "printedName": "SlothCreator.Sloth.Color",
+                          "usr": "s:12SlothCreator0A0V5ColorO"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:s12CaseIterableP",
+              "mangledName": "$ss12CaseIterableP"
+            },
+            {
+              "kind": "Conformance",
+              "name": "CustomStringConvertible",
+              "printedName": "CustomStringConvertible",
+              "usr": "s:s23CustomStringConvertibleP",
+              "mangledName": "$ss23CustomStringConvertibleP"
+            }
+          ]
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "Food",
+          "printedName": "Food",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "name",
+              "printedName": "name",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:12SlothCreator0A0V4FoodV4nameSSvp",
+              "mangledName": "$s12SlothCreator0A0V4FoodV4nameSSvp",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 0,
+              "isLet": true,
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:12SlothCreator0A0V4FoodV4nameSSvg",
+                  "mangledName": "$s12SlothCreator0A0V4FoodV4nameSSvg",
+                  "moduleName": "SlothCreator",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "energy",
+              "printedName": "energy",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:12SlothCreator0A0V4FoodV6energySivp",
+              "mangledName": "$s12SlothCreator0A0V4FoodV6energySivp",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 1,
+              "isLet": true,
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Int",
+                      "printedName": "Swift.Int",
+                      "usr": "s:Si"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:12SlothCreator0A0V4FoodV6energySivg",
+                  "mangledName": "$s12SlothCreator0A0V4FoodV6energySivg",
+                  "moduleName": "SlothCreator",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Constructor",
+              "name": "init",
+              "printedName": "init(name:energy:)",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Food",
+                  "printedName": "SlothCreator.Sloth.Food",
+                  "usr": "s:12SlothCreator0A0V4FoodV"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Constructor",
+              "usr": "s:12SlothCreator0A0V4FoodV4name6energyAESS_Sitcfc",
+              "mangledName": "$s12SlothCreator0A0V4FoodV4name6energyAESS_Sitcfc",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "init_kind": "Designated"
+            },
+            {
+              "kind": "Var",
+              "name": "twig",
+              "printedName": "twig",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Food",
+                  "printedName": "SlothCreator.Sloth.Food",
+                  "usr": "s:12SlothCreator0A0V4FoodV"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:12SlothCreator0A0V4FoodV4twigAEvpZ",
+              "mangledName": "$s12SlothCreator0A0V4FoodV4twigAEvpZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "isLet": true,
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Food",
+                      "printedName": "SlothCreator.Sloth.Food",
+                      "usr": "s:12SlothCreator0A0V4FoodV"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:12SlothCreator0A0V4FoodV4twigAEvgZ",
+                  "mangledName": "$s12SlothCreator0A0V4FoodV4twigAEvgZ",
+                  "moduleName": "SlothCreator",
+                  "static": true,
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "regularLeaf",
+              "printedName": "regularLeaf",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Food",
+                  "printedName": "SlothCreator.Sloth.Food",
+                  "usr": "s:12SlothCreator0A0V4FoodV"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:12SlothCreator0A0V4FoodV11regularLeafAEvpZ",
+              "mangledName": "$s12SlothCreator0A0V4FoodV11regularLeafAEvpZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "isLet": true,
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Food",
+                      "printedName": "SlothCreator.Sloth.Food",
+                      "usr": "s:12SlothCreator0A0V4FoodV"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:12SlothCreator0A0V4FoodV11regularLeafAEvgZ",
+                  "mangledName": "$s12SlothCreator0A0V4FoodV11regularLeafAEvgZ",
+                  "moduleName": "SlothCreator",
+                  "static": true,
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "largeLeaf",
+              "printedName": "largeLeaf",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Food",
+                  "printedName": "SlothCreator.Sloth.Food",
+                  "usr": "s:12SlothCreator0A0V4FoodV"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:12SlothCreator0A0V4FoodV9largeLeafAEvpZ",
+              "mangledName": "$s12SlothCreator0A0V4FoodV9largeLeafAEvpZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "isLet": true,
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Food",
+                      "printedName": "SlothCreator.Sloth.Food",
+                      "usr": "s:12SlothCreator0A0V4FoodV"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:12SlothCreator0A0V4FoodV9largeLeafAEvgZ",
+                  "mangledName": "$s12SlothCreator0A0V4FoodV9largeLeafAEvgZ",
+                  "moduleName": "SlothCreator",
+                  "static": true,
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "get"
+                }
+              ]
+            }
+          ],
+          "declKind": "Struct",
+          "usr": "s:12SlothCreator0A0V4FoodV",
+          "mangledName": "$s12SlothCreator0A0V4FoodV",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ]
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "Power",
+          "printedName": "Power",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "ice",
+              "printedName": "ice",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.Sloth.Power.Type) -> SlothCreator.Sloth.Power",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Power",
+                      "printedName": "SlothCreator.Sloth.Power",
+                      "usr": "s:12SlothCreator0A0V5PowerO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.Sloth.Power.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Power",
+                          "printedName": "SlothCreator.Sloth.Power",
+                          "usr": "s:12SlothCreator0A0V5PowerO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator0A0V5PowerO3iceyA2EmF",
+              "mangledName": "$s12SlothCreator0A0V5PowerO3iceyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 0
+            },
+            {
+              "kind": "Var",
+              "name": "fire",
+              "printedName": "fire",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.Sloth.Power.Type) -> SlothCreator.Sloth.Power",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Power",
+                      "printedName": "SlothCreator.Sloth.Power",
+                      "usr": "s:12SlothCreator0A0V5PowerO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.Sloth.Power.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Power",
+                          "printedName": "SlothCreator.Sloth.Power",
+                          "usr": "s:12SlothCreator0A0V5PowerO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator0A0V5PowerO4fireyA2EmF",
+              "mangledName": "$s12SlothCreator0A0V5PowerO4fireyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 1
+            },
+            {
+              "kind": "Var",
+              "name": "wind",
+              "printedName": "wind",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.Sloth.Power.Type) -> SlothCreator.Sloth.Power",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Power",
+                      "printedName": "SlothCreator.Sloth.Power",
+                      "usr": "s:12SlothCreator0A0V5PowerO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.Sloth.Power.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Power",
+                          "printedName": "SlothCreator.Sloth.Power",
+                          "usr": "s:12SlothCreator0A0V5PowerO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator0A0V5PowerO4windyA2EmF",
+              "mangledName": "$s12SlothCreator0A0V5PowerO4windyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 2
+            },
+            {
+              "kind": "Var",
+              "name": "lightning",
+              "printedName": "lightning",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.Sloth.Power.Type) -> SlothCreator.Sloth.Power",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Power",
+                      "printedName": "SlothCreator.Sloth.Power",
+                      "usr": "s:12SlothCreator0A0V5PowerO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.Sloth.Power.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Power",
+                          "printedName": "SlothCreator.Sloth.Power",
+                          "usr": "s:12SlothCreator0A0V5PowerO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator0A0V5PowerO9lightningyA2EmF",
+              "mangledName": "$s12SlothCreator0A0V5PowerO9lightningyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 3
+            },
+            {
+              "kind": "Var",
+              "name": "none",
+              "printedName": "none",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(SlothCreator.Sloth.Power.Type) -> SlothCreator.Sloth.Power",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Power",
+                      "printedName": "SlothCreator.Sloth.Power",
+                      "usr": "s:12SlothCreator0A0V5PowerO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "SlothCreator.Sloth.Power.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Power",
+                          "printedName": "SlothCreator.Sloth.Power",
+                          "usr": "s:12SlothCreator0A0V5PowerO"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:12SlothCreator0A0V5PowerO4noneyA2EmF",
+              "mangledName": "$s12SlothCreator0A0V5PowerO4noneyA2EmF",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 4
+            },
+            {
+              "kind": "Var",
+              "name": "description",
+              "printedName": "description",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:12SlothCreator0A0V5PowerO11descriptionSSvp",
+              "mangledName": "$s12SlothCreator0A0V5PowerO11descriptionSSvp",
+              "moduleName": "SlothCreator",
+              "declAttributes": [
+                "AccessControl"
+              ],
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:12SlothCreator0A0V5PowerO11descriptionSSvg",
+                  "mangledName": "$s12SlothCreator0A0V5PowerO11descriptionSSvg",
+                  "moduleName": "SlothCreator",
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Constructor",
+              "name": "init",
+              "printedName": "init(rawValue:)",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "SlothCreator.Sloth.Power?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Power",
+                      "printedName": "SlothCreator.Sloth.Power",
+                      "usr": "s:12SlothCreator0A0V5PowerO"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Constructor",
+              "usr": "s:12SlothCreator0A0V5PowerO8rawValueAESgSS_tcfc",
+              "mangledName": "$s12SlothCreator0A0V5PowerO8rawValueAESgSS_tcfc",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Inlinable"
+              ],
+              "init_kind": "Designated"
+            },
+            {
+              "kind": "Var",
+              "name": "rawValue",
+              "printedName": "rawValue",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:12SlothCreator0A0V5PowerO8rawValueSSvp",
+              "mangledName": "$s12SlothCreator0A0V5PowerO8rawValueSSvp",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:12SlothCreator0A0V5PowerO8rawValueSSvg",
+                  "mangledName": "$s12SlothCreator0A0V5PowerO8rawValueSSvg",
+                  "moduleName": "SlothCreator",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Inlinable"
+                  ],
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "allCases",
+              "printedName": "allCases",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[SlothCreator.Sloth.Power]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Power",
+                      "printedName": "SlothCreator.Sloth.Power",
+                      "usr": "s:12SlothCreator0A0V5PowerO"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:12SlothCreator0A0V5PowerO8allCasesSayAEGvpZ",
+              "mangledName": "$s12SlothCreator0A0V5PowerO8allCasesSayAEGvpZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[SlothCreator.Sloth.Power]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Power",
+                          "printedName": "SlothCreator.Sloth.Power",
+                          "usr": "s:12SlothCreator0A0V5PowerO"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:12SlothCreator0A0V5PowerO8allCasesSayAEGvgZ",
+                  "mangledName": "$s12SlothCreator0A0V5PowerO8allCasesSayAEGvgZ",
+                  "moduleName": "SlothCreator",
+                  "static": true,
+                  "implicit": true,
+                  "accessorKind": "get"
+                }
+              ]
+            }
+          ],
+          "declKind": "Enum",
+          "usr": "s:12SlothCreator0A0V5PowerO",
+          "mangledName": "$s12SlothCreator0A0V5PowerO",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "enumRawTypeName": "String",
+          "isEnumExhaustive": true,
+          "conformances": [
+            {
+              "kind": "Conformance",
+              "name": "Equatable",
+              "printedName": "Equatable",
+              "usr": "s:SQ",
+              "mangledName": "$sSQ"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Hashable",
+              "printedName": "Hashable",
+              "usr": "s:SH",
+              "mangledName": "$sSH"
+            },
+            {
+              "kind": "Conformance",
+              "name": "RawRepresentable",
+              "printedName": "RawRepresentable",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "RawValue",
+                  "printedName": "RawValue",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:SY",
+              "mangledName": "$sSY"
+            },
+            {
+              "kind": "Conformance",
+              "name": "CaseIterable",
+              "printedName": "CaseIterable",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "AllCases",
+                  "printedName": "AllCases",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[SlothCreator.Sloth.Power]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Power",
+                          "printedName": "SlothCreator.Sloth.Power",
+                          "usr": "s:12SlothCreator0A0V5PowerO"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:s12CaseIterableP",
+              "mangledName": "$ss12CaseIterableP"
+            },
+            {
+              "kind": "Conformance",
+              "name": "CustomStringConvertible",
+              "printedName": "CustomStringConvertible",
+              "usr": "s:s23CustomStringConvertibleP",
+              "mangledName": "$ss23CustomStringConvertibleP"
+            }
+          ]
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:12SlothCreator0A0V",
+      "mangledName": "$s12SlothCreator0A0V",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftUI",
+      "printedName": "SwiftUI",
+      "declKind": "Import",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "HabitatView",
+      "printedName": "HabitatView",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "habitat",
+          "printedName": "habitat",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Habitat",
+              "printedName": "SlothCreator.Habitat",
+              "usr": "s:12SlothCreator7HabitatV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator11HabitatViewV7habitatAA0C0Vvp",
+          "mangledName": "$s12SlothCreator11HabitatViewV7habitatAA0C0Vvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Habitat",
+                  "printedName": "SlothCreator.Habitat",
+                  "usr": "s:12SlothCreator7HabitatV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator11HabitatViewV7habitatAA0C0Vvg",
+              "mangledName": "$s12SlothCreator11HabitatViewV7habitatAA0C0Vvg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Habitat",
+                  "printedName": "SlothCreator.Habitat",
+                  "usr": "s:12SlothCreator7HabitatV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator11HabitatViewV7habitatAA0C0Vvs",
+              "mangledName": "$s12SlothCreator11HabitatViewV7habitatAA0C0Vvs",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator11HabitatViewV7habitatAA0C0VvM",
+              "mangledName": "$s12SlothCreator11HabitatViewV7habitatAA0C0VvM",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(habitat:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "HabitatView",
+              "printedName": "SlothCreator.HabitatView",
+              "usr": "s:12SlothCreator11HabitatViewV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Habitat",
+              "printedName": "SlothCreator.Habitat",
+              "usr": "s:12SlothCreator7HabitatV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:12SlothCreator11HabitatViewV7habitatAcA0C0V_tcfc",
+          "mangledName": "$s12SlothCreator11HabitatViewV7habitatAcA0C0V_tcfc",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Var",
+          "name": "body",
+          "printedName": "body",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "OpaqueTypeArchetype",
+              "printedName": "some SwiftUI.View",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "View",
+                  "printedName": "SwiftUI.View",
+                  "usr": "s:7SwiftUI4ViewP"
+                }
+              ]
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator11HabitatViewV4bodyQrvp",
+          "mangledName": "$s12SlothCreator11HabitatViewV4bodyQrvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "Custom",
+            "AccessControl"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator11HabitatViewV4bodyQrvg",
+              "mangledName": "$s12SlothCreator11HabitatViewV4bodyQrvg",
+              "moduleName": "SlothCreator",
+              "accessorKind": "get"
+            }
+          ]
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:12SlothCreator11HabitatViewV",
+      "mangledName": "$s12SlothCreator11HabitatViewV",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "View",
+          "printedName": "View",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Body",
+              "printedName": "Body",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "usr": "s:7SwiftUI4ViewP",
+          "mangledName": "$s7SwiftUI4ViewP"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "HabitatView_Previews",
+      "printedName": "HabitatView_Previews",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "previews",
+          "printedName": "previews",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "OpaqueTypeArchetype",
+              "printedName": "some SwiftUI.View",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "View",
+                  "printedName": "SwiftUI.View",
+                  "usr": "s:7SwiftUI4ViewP"
+                }
+              ]
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator20HabitatView_PreviewsV8previewsQrvpZ",
+          "mangledName": "$s12SlothCreator20HabitatView_PreviewsV8previewsQrvpZ",
+          "moduleName": "SlothCreator",
+          "static": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator20HabitatView_PreviewsV8previewsQrvgZ",
+              "mangledName": "$s12SlothCreator20HabitatView_PreviewsV8previewsQrvgZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "HabitatView_Previews",
+              "printedName": "SlothCreator.HabitatView_Previews",
+              "usr": "s:12SlothCreator20HabitatView_PreviewsV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:12SlothCreator20HabitatView_PreviewsVACycfc",
+          "mangledName": "$s12SlothCreator20HabitatView_PreviewsVACycfc",
+          "moduleName": "SlothCreator",
+          "implicit": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:12SlothCreator20HabitatView_PreviewsV",
+      "mangledName": "$s12SlothCreator20HabitatView_PreviewsV",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "Custom",
+        "RawDocComment"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "PreviewProvider",
+          "printedName": "PreviewProvider",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Previews",
+              "printedName": "Previews",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "usr": "s:7SwiftUI15PreviewProviderP",
+          "mangledName": "$s7SwiftUI15PreviewProviderP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_PreviewProvider",
+          "printedName": "_PreviewProvider",
+          "usr": "s:7SwiftUI16_PreviewProviderP",
+          "mangledName": "$s7SwiftUI16_PreviewProviderP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftUI",
+      "printedName": "SwiftUI",
+      "declKind": "Import",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "PowerPicker",
+      "printedName": "PowerPicker",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "power",
+          "printedName": "power",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Power",
+              "printedName": "SlothCreator.Sloth.Power",
+              "usr": "s:12SlothCreator0A0V5PowerO"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator11PowerPickerV5powerAA0A0V0C0Ovp",
+          "mangledName": "$s12SlothCreator11PowerPickerV5powerAA0A0V0C0Ovp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "ProjectedValueProperty",
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Power",
+                  "printedName": "SlothCreator.Sloth.Power",
+                  "usr": "s:12SlothCreator0A0V5PowerO"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator11PowerPickerV5powerAA0A0V0C0Ovg",
+              "mangledName": "$s12SlothCreator11PowerPickerV5powerAA0A0V0C0Ovg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Power",
+                  "printedName": "SlothCreator.Sloth.Power",
+                  "usr": "s:12SlothCreator0A0V5PowerO"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator11PowerPickerV5powerAA0A0V0C0Ovs",
+              "mangledName": "$s12SlothCreator11PowerPickerV5powerAA0A0V0C0Ovs",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator11PowerPickerV5powerAA0A0V0C0OvM",
+              "mangledName": "$s12SlothCreator11PowerPickerV5powerAA0A0V0C0OvM",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "$power",
+          "printedName": "$power",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Binding",
+              "printedName": "SwiftUI.Binding<SlothCreator.Sloth.Power>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Power",
+                  "printedName": "SlothCreator.Sloth.Power",
+                  "usr": "s:12SlothCreator0A0V5PowerO"
+                }
+              ],
+              "usr": "s:7SwiftUI7BindingV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator11PowerPickerV6$power7SwiftUI7BindingVyAA0A0V0C0OGvp",
+          "mangledName": "$s12SlothCreator11PowerPickerV6$power7SwiftUI7BindingVyAA0A0V0C0OGvp",
+          "moduleName": "SlothCreator",
+          "implicit": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Binding",
+                  "printedName": "SwiftUI.Binding<SlothCreator.Sloth.Power>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Power",
+                      "printedName": "SlothCreator.Sloth.Power",
+                      "usr": "s:12SlothCreator0A0V5PowerO"
+                    }
+                  ],
+                  "usr": "s:7SwiftUI7BindingV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator11PowerPickerV6$power7SwiftUI7BindingVyAA0A0V0C0OGvg",
+              "mangledName": "$s12SlothCreator11PowerPickerV6$power7SwiftUI7BindingVyAA0A0V0C0OGvg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "_power",
+          "printedName": "_power",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Binding",
+              "printedName": "SwiftUI.Binding<SlothCreator.Sloth.Power>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Power",
+                  "printedName": "SlothCreator.Sloth.Power",
+                  "usr": "s:12SlothCreator0A0V5PowerO"
+                }
+              ],
+              "usr": "s:7SwiftUI7BindingV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator11PowerPickerV6_power022_D2CF163EED698D01ADAA9F9F9A6A2192LL7SwiftUI7BindingVyAA0A0V0C0OGvp",
+          "mangledName": "$s12SlothCreator11PowerPickerV6_power022_D2CF163EED698D01ADAA9F9F9A6A2192LL7SwiftUI7BindingVyAA0A0V0C0OGvp",
+          "moduleName": "SlothCreator",
+          "implicit": true,
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(power:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "PowerPicker",
+              "printedName": "SlothCreator.PowerPicker",
+              "usr": "s:12SlothCreator11PowerPickerV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Binding",
+              "printedName": "SwiftUI.Binding<SlothCreator.Sloth.Power>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Power",
+                  "printedName": "SlothCreator.Sloth.Power",
+                  "usr": "s:12SlothCreator0A0V5PowerO"
+                }
+              ],
+              "usr": "s:7SwiftUI7BindingV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:12SlothCreator11PowerPickerV5powerAC7SwiftUI7BindingVyAA0A0V0C0OG_tcfc",
+          "mangledName": "$s12SlothCreator11PowerPickerV5powerAC7SwiftUI7BindingVyAA0A0V0C0OG_tcfc",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Var",
+          "name": "body",
+          "printedName": "body",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "OpaqueTypeArchetype",
+              "printedName": "some SwiftUI.View",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "View",
+                  "printedName": "SwiftUI.View",
+                  "usr": "s:7SwiftUI4ViewP"
+                }
+              ]
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator11PowerPickerV4bodyQrvp",
+          "mangledName": "$s12SlothCreator11PowerPickerV4bodyQrvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "Custom",
+            "AccessControl"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator11PowerPickerV4bodyQrvg",
+              "mangledName": "$s12SlothCreator11PowerPickerV4bodyQrvg",
+              "moduleName": "SlothCreator",
+              "accessorKind": "get"
+            }
+          ]
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:12SlothCreator11PowerPickerV",
+      "mangledName": "$s12SlothCreator11PowerPickerV",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "View",
+          "printedName": "View",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Body",
+              "printedName": "Body",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "usr": "s:7SwiftUI4ViewP",
+          "mangledName": "$s7SwiftUI4ViewP"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "PowerPicker_Previews",
+      "printedName": "PowerPicker_Previews",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "power",
+          "printedName": "power",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Power",
+              "printedName": "SlothCreator.Sloth.Power",
+              "usr": "s:12SlothCreator0A0V5PowerO"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator20PowerPicker_PreviewsV5powerAA0A0V0C0OvpZ",
+          "mangledName": "$s12SlothCreator20PowerPicker_PreviewsV5powerAA0A0V0C0OvpZ",
+          "moduleName": "SlothCreator",
+          "static": true,
+          "declAttributes": [
+            "Custom",
+            "ProjectedValueProperty",
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Power",
+                  "printedName": "SlothCreator.Sloth.Power",
+                  "usr": "s:12SlothCreator0A0V5PowerO"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator20PowerPicker_PreviewsV5powerAA0A0V0C0OvgZ",
+              "mangledName": "$s12SlothCreator20PowerPicker_PreviewsV5powerAA0A0V0C0OvgZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Power",
+                  "printedName": "SlothCreator.Sloth.Power",
+                  "usr": "s:12SlothCreator0A0V5PowerO"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator20PowerPicker_PreviewsV5powerAA0A0V0C0OvsZ",
+              "mangledName": "$s12SlothCreator20PowerPicker_PreviewsV5powerAA0A0V0C0OvsZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator20PowerPicker_PreviewsV5powerAA0A0V0C0OvMZ",
+              "mangledName": "$s12SlothCreator20PowerPicker_PreviewsV5powerAA0A0V0C0OvMZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "$power",
+          "printedName": "$power",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Binding",
+              "printedName": "SwiftUI.Binding<SlothCreator.Sloth.Power>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Power",
+                  "printedName": "SlothCreator.Sloth.Power",
+                  "usr": "s:12SlothCreator0A0V5PowerO"
+                }
+              ],
+              "usr": "s:7SwiftUI7BindingV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator20PowerPicker_PreviewsV6$power7SwiftUI7BindingVyAA0A0V0C0OGvpZ",
+          "mangledName": "$s12SlothCreator20PowerPicker_PreviewsV6$power7SwiftUI7BindingVyAA0A0V0C0OGvpZ",
+          "moduleName": "SlothCreator",
+          "static": true,
+          "implicit": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Binding",
+                  "printedName": "SwiftUI.Binding<SlothCreator.Sloth.Power>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Power",
+                      "printedName": "SlothCreator.Sloth.Power",
+                      "usr": "s:12SlothCreator0A0V5PowerO"
+                    }
+                  ],
+                  "usr": "s:7SwiftUI7BindingV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator20PowerPicker_PreviewsV6$power7SwiftUI7BindingVyAA0A0V0C0OGvgZ",
+              "mangledName": "$s12SlothCreator20PowerPicker_PreviewsV6$power7SwiftUI7BindingVyAA0A0V0C0OGvgZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "previews",
+          "printedName": "previews",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "OpaqueTypeArchetype",
+              "printedName": "some SwiftUI.View",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "View",
+                  "printedName": "SwiftUI.View",
+                  "usr": "s:7SwiftUI4ViewP"
+                }
+              ]
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator20PowerPicker_PreviewsV8previewsQrvpZ",
+          "mangledName": "$s12SlothCreator20PowerPicker_PreviewsV8previewsQrvpZ",
+          "moduleName": "SlothCreator",
+          "static": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator20PowerPicker_PreviewsV8previewsQrvgZ",
+              "mangledName": "$s12SlothCreator20PowerPicker_PreviewsV8previewsQrvgZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "PowerPicker_Previews",
+              "printedName": "SlothCreator.PowerPicker_Previews",
+              "usr": "s:12SlothCreator20PowerPicker_PreviewsV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:12SlothCreator20PowerPicker_PreviewsVACycfc",
+          "mangledName": "$s12SlothCreator20PowerPicker_PreviewsVACycfc",
+          "moduleName": "SlothCreator",
+          "implicit": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:12SlothCreator20PowerPicker_PreviewsV",
+      "mangledName": "$s12SlothCreator20PowerPicker_PreviewsV",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "Custom"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "PreviewProvider",
+          "printedName": "PreviewProvider",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Previews",
+              "printedName": "Previews",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "usr": "s:7SwiftUI15PreviewProviderP",
+          "mangledName": "$s7SwiftUI15PreviewProviderP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_PreviewProvider",
+          "printedName": "_PreviewProvider",
+          "usr": "s:7SwiftUI16_PreviewProviderP",
+          "mangledName": "$s7SwiftUI16_PreviewProviderP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftUI",
+      "printedName": "SwiftUI",
+      "declKind": "Import",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "SlothView",
+      "printedName": "SlothView",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "sloth",
+          "printedName": "sloth",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Sloth",
+              "printedName": "SlothCreator.Sloth",
+              "usr": "s:12SlothCreator0A0V"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A4ViewV5slothAA0A0Vvp",
+          "mangledName": "$s12SlothCreator0A4ViewV5slothAA0A0Vvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "ProjectedValueProperty",
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Sloth",
+                  "printedName": "SlothCreator.Sloth",
+                  "usr": "s:12SlothCreator0A0V"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A4ViewV5slothAA0A0Vvg",
+              "mangledName": "$s12SlothCreator0A4ViewV5slothAA0A0Vvg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Sloth",
+                  "printedName": "SlothCreator.Sloth",
+                  "usr": "s:12SlothCreator0A0V"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A4ViewV5slothAA0A0Vvs",
+              "mangledName": "$s12SlothCreator0A4ViewV5slothAA0A0Vvs",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A4ViewV5slothAA0A0VvM",
+              "mangledName": "$s12SlothCreator0A4ViewV5slothAA0A0VvM",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "$sloth",
+          "printedName": "$sloth",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Binding",
+              "printedName": "SwiftUI.Binding<SlothCreator.Sloth>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Sloth",
+                  "printedName": "SlothCreator.Sloth",
+                  "usr": "s:12SlothCreator0A0V"
+                }
+              ],
+              "usr": "s:7SwiftUI7BindingV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A4ViewV6$sloth7SwiftUI7BindingVyAA0A0VGvp",
+          "mangledName": "$s12SlothCreator0A4ViewV6$sloth7SwiftUI7BindingVyAA0A0VGvp",
+          "moduleName": "SlothCreator",
+          "implicit": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Binding",
+                  "printedName": "SwiftUI.Binding<SlothCreator.Sloth>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Sloth",
+                      "printedName": "SlothCreator.Sloth",
+                      "usr": "s:12SlothCreator0A0V"
+                    }
+                  ],
+                  "usr": "s:7SwiftUI7BindingV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A4ViewV6$sloth7SwiftUI7BindingVyAA0A0VGvg",
+              "mangledName": "$s12SlothCreator0A4ViewV6$sloth7SwiftUI7BindingVyAA0A0VGvg",
+              "moduleName": "SlothCreator",
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "_sloth",
+          "printedName": "_sloth",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Binding",
+              "printedName": "SwiftUI.Binding<SlothCreator.Sloth>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Sloth",
+                  "printedName": "SlothCreator.Sloth",
+                  "usr": "s:12SlothCreator0A0V"
+                }
+              ],
+              "usr": "s:7SwiftUI7BindingV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A4ViewV6_sloth33_5B47A5CD7379832BAC5D3A8BE47F48DALL7SwiftUI7BindingVyAA0A0VGvp",
+          "mangledName": "$s12SlothCreator0A4ViewV6_sloth33_5B47A5CD7379832BAC5D3A8BE47F48DALL7SwiftUI7BindingVyAA0A0VGvp",
+          "moduleName": "SlothCreator",
+          "implicit": true,
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(sloth:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "SlothView",
+              "printedName": "SlothCreator.SlothView",
+              "usr": "s:12SlothCreator0A4ViewV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Binding",
+              "printedName": "SwiftUI.Binding<SlothCreator.Sloth>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Sloth",
+                  "printedName": "SlothCreator.Sloth",
+                  "usr": "s:12SlothCreator0A0V"
+                }
+              ],
+              "usr": "s:7SwiftUI7BindingV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:12SlothCreator0A4ViewV5slothAC7SwiftUI7BindingVyAA0A0VG_tcfc",
+          "mangledName": "$s12SlothCreator0A4ViewV5slothAC7SwiftUI7BindingVyAA0A0VG_tcfc",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Var",
+          "name": "body",
+          "printedName": "body",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "OpaqueTypeArchetype",
+              "printedName": "some SwiftUI.View",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "View",
+                  "printedName": "SwiftUI.View",
+                  "usr": "s:7SwiftUI4ViewP"
+                }
+              ]
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A4ViewV4bodyQrvp",
+          "mangledName": "$s12SlothCreator0A4ViewV4bodyQrvp",
+          "moduleName": "SlothCreator",
+          "declAttributes": [
+            "Custom",
+            "AccessControl"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A4ViewV4bodyQrvg",
+              "mangledName": "$s12SlothCreator0A4ViewV4bodyQrvg",
+              "moduleName": "SlothCreator",
+              "accessorKind": "get"
+            }
+          ]
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:12SlothCreator0A4ViewV",
+      "mangledName": "$s12SlothCreator0A4ViewV",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "View",
+          "printedName": "View",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Body",
+              "printedName": "Body",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "usr": "s:7SwiftUI4ViewP",
+          "mangledName": "$s7SwiftUI4ViewP"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "SlothView_Previews",
+      "printedName": "SlothView_Previews",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "sloth",
+          "printedName": "sloth",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Sloth",
+              "printedName": "SlothCreator.Sloth",
+              "usr": "s:12SlothCreator0A0V"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A13View_PreviewsV5slothAA0A0VvpZ",
+          "mangledName": "$s12SlothCreator0A13View_PreviewsV5slothAA0A0VvpZ",
+          "moduleName": "SlothCreator",
+          "static": true,
+          "declAttributes": [
+            "Custom",
+            "ProjectedValueProperty",
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Sloth",
+                  "printedName": "SlothCreator.Sloth",
+                  "usr": "s:12SlothCreator0A0V"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A13View_PreviewsV5slothAA0A0VvgZ",
+              "mangledName": "$s12SlothCreator0A13View_PreviewsV5slothAA0A0VvgZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Sloth",
+                  "printedName": "SlothCreator.Sloth",
+                  "usr": "s:12SlothCreator0A0V"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A13View_PreviewsV5slothAA0A0VvsZ",
+              "mangledName": "$s12SlothCreator0A13View_PreviewsV5slothAA0A0VvsZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A13View_PreviewsV5slothAA0A0VvMZ",
+              "mangledName": "$s12SlothCreator0A13View_PreviewsV5slothAA0A0VvMZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "$sloth",
+          "printedName": "$sloth",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Binding",
+              "printedName": "SwiftUI.Binding<SlothCreator.Sloth>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Sloth",
+                  "printedName": "SlothCreator.Sloth",
+                  "usr": "s:12SlothCreator0A0V"
+                }
+              ],
+              "usr": "s:7SwiftUI7BindingV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A13View_PreviewsV6$sloth7SwiftUI7BindingVyAA0A0VGvpZ",
+          "mangledName": "$s12SlothCreator0A13View_PreviewsV6$sloth7SwiftUI7BindingVyAA0A0VGvpZ",
+          "moduleName": "SlothCreator",
+          "static": true,
+          "implicit": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Binding",
+                  "printedName": "SwiftUI.Binding<SlothCreator.Sloth>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Sloth",
+                      "printedName": "SlothCreator.Sloth",
+                      "usr": "s:12SlothCreator0A0V"
+                    }
+                  ],
+                  "usr": "s:7SwiftUI7BindingV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A13View_PreviewsV6$sloth7SwiftUI7BindingVyAA0A0VGvgZ",
+              "mangledName": "$s12SlothCreator0A13View_PreviewsV6$sloth7SwiftUI7BindingVyAA0A0VGvgZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "previews",
+          "printedName": "previews",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "OpaqueTypeArchetype",
+              "printedName": "some SwiftUI.View",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "View",
+                  "printedName": "SwiftUI.View",
+                  "usr": "s:7SwiftUI4ViewP"
+                }
+              ]
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12SlothCreator0A13View_PreviewsV8previewsQrvpZ",
+          "mangledName": "$s12SlothCreator0A13View_PreviewsV8previewsQrvpZ",
+          "moduleName": "SlothCreator",
+          "static": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12SlothCreator0A13View_PreviewsV8previewsQrvgZ",
+              "mangledName": "$s12SlothCreator0A13View_PreviewsV8previewsQrvgZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "SlothView_Previews",
+              "printedName": "SlothCreator.SlothView_Previews",
+              "usr": "s:12SlothCreator0A13View_PreviewsV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:12SlothCreator0A13View_PreviewsVACycfc",
+          "mangledName": "$s12SlothCreator0A13View_PreviewsVACycfc",
+          "moduleName": "SlothCreator",
+          "implicit": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:12SlothCreator0A13View_PreviewsV",
+      "mangledName": "$s12SlothCreator0A13View_PreviewsV",
+      "moduleName": "SlothCreator",
+      "declAttributes": [
+        "Custom"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "PreviewProvider",
+          "printedName": "PreviewProvider",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Previews",
+              "printedName": "Previews",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "OpaqueTypeArchetype",
+                  "printedName": "some SwiftUI.View",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "View",
+                      "printedName": "SwiftUI.View",
+                      "usr": "s:7SwiftUI4ViewP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "usr": "s:7SwiftUI15PreviewProviderP",
+          "mangledName": "$s7SwiftUI15PreviewProviderP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_PreviewProvider",
+          "printedName": "_PreviewProvider",
+          "usr": "s:7SwiftUI16_PreviewProviderP",
+          "mangledName": "$s7SwiftUI16_PreviewProviderP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "SlothCreator"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "Bundle",
+      "printedName": "Bundle",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "module",
+          "printedName": "module",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bundle",
+              "printedName": "Foundation.Bundle",
+              "usr": "c:objc(cs)NSBundle"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:So8NSBundleC12SlothCreatorE6moduleABvpZ",
+          "mangledName": "$sSo8NSBundleC12SlothCreatorE6moduleABvpZ",
+          "moduleName": "SlothCreator",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bundle",
+                  "printedName": "Foundation.Bundle",
+                  "usr": "c:objc(cs)NSBundle"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:So8NSBundleC12SlothCreatorE6moduleABvgZ",
+              "mangledName": "$sSo8NSBundleC12SlothCreatorE6moduleABvgZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bundle",
+                  "printedName": "Foundation.Bundle",
+                  "usr": "c:objc(cs)NSBundle"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:So8NSBundleC12SlothCreatorE6moduleABvsZ",
+              "mangledName": "$sSo8NSBundleC12SlothCreatorE6moduleABvsZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:So8NSBundleC12SlothCreatorE6moduleABvMZ",
+              "mangledName": "$sSo8NSBundleC12SlothCreatorE6moduleABvMZ",
+              "moduleName": "SlothCreator",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:objc(cs)NSBundle",
+      "moduleName": "Foundation",
+      "isOpen": true,
+      "objc_name": "NSBundle",
+      "declAttributes": [
+        "ObjC",
+        "Dynamic"
+      ],
+      "superclassUsr": "c:objc(cs)NSObject",
+      "isExternal": true,
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Show eligible build destinations for NeoPop
-      run: xcodebuild -showdestinations -scheme NeoPop
+    - name: Show eligible build destinations for SlothCreator
+      run: xcodebuild -showdestinations -scheme SlothCreator
     - name: Build and test ( iOS 15.0)
       run: xcodebuild test -scheme NeoPop -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 12 Pro'

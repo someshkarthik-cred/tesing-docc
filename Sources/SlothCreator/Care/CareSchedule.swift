@@ -12,6 +12,8 @@ public struct CareSchedule {
     /// The actions a sloth performs at scheduled times.
     public var events: [(Date, Event)] = []
     
+    public var someCode: Int = 0
+    
     /// An action a sloth can perform.
     public enum Event {
         /// A meal that a sloth usually eats at the start of their day, in the morning.

@@ -33,7 +33,7 @@ jobs:
         xcode-version: ${{ matrix.xcode }}
     - name: Check xcodebuild version
       run: xcodebuild -version
-    - name: Check xcode embedded SDKs
+    - name: Check xcode embedded SDKs 123
       run: xcodebuild -showsdks
     - name: Show buildable schemes
       run: xcodebuild -list

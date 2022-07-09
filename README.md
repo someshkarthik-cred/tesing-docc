@@ -2,8 +2,6 @@
 
 [<img src="https://github.com/SomeshKarthikK/tesing-docc/workflows/Swift/badge.svg" />](https://github.com/SomeshKarthikK/tesing-docc/actions?query=workflow%3ACI)
 
-![CI](https://github.com/SomeshKarthikK/tesing-docc/actions/workflows/swift.yml/badge.svg)
-
 Build DocC documentation for a Swift package that contains a DocC Catalog.
 
 ## Overview

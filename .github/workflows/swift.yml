@@ -1,0 +1,21 @@
+name: Swift
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Show eligible build destinations for NeoPop
+      run: xcodebuild -showdestinations -scheme NeoPop
+    - name: Build and test ( iOS 15.0)
+      run: xcodebuild test -scheme NeoPop -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 12 Pro'

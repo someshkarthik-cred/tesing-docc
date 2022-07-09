@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A utility type that generates names for sloths.
-*/
+ Abstract:
+ A utility type that generates names for sloths.
+ */
 
 /// A type that generates names for sloths.
 public protocol NameGenerator {

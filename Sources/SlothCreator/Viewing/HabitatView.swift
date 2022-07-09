@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A view that displays a sloth's habitat.
-*/
+ Abstract:
+ A view that displays a sloth's habitat.
+ */
 
 import SwiftUI
 
@@ -19,12 +19,12 @@ import SwiftUI
 /// - ``body``
 public struct HabitatView: View {
     var habitat: Habitat
-    
+
     /// Creates a view that displays the specified habitat.
     public init(habitat: Habitat) {
         self.habitat = habitat
     }
-    
+
     public var body: some View {
         EmptyView()
     }

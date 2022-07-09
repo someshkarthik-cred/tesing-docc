@@ -18,4 +18,4 @@ jobs:
     - name: Show eligible build destinations for SlothCreator
       run: xcodebuild -showdestinations -scheme SlothCreator
     - name: Build and test ( iOS 15.0)
-      run: xcodebuild -scheme SlothCreator -destination 'platform=iOS Simulator,id=86727DB6-72F3-47D2-9C08-2E6C8ECDABD7,OS=15.2,name=iPhone 12 Pro'
+      run: xcodebuild -scheme SlothCreator -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro'

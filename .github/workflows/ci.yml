@@ -10,10 +10,11 @@ on:
 
 jobs:
   build:
-    name:  ${{ matrix.platform }} ${{ matrix.macos }})
+    name: ${{ matrix.command }} on  ${{ matrix.platform }} (xcode ${{ matrix.xcode }}, ${{ matrix.macos }})
     runs-on: ${{ matrix.macos }}
     strategy:
-      matrix: 
+      matrix:
+        xcode: ['13.4.1', '13.3', '13.0']
         macos: ['macos-latest']
         scheme: ['SlothCreator']
         command: ['build']

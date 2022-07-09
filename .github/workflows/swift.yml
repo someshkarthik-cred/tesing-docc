@@ -10,12 +10,30 @@ on:
 
 jobs:
   build:
-
-    runs-on: macos-latest
-
+    name:  ${{ matrix.platform }} ${{ matrix.macos }})
+    runs-on: ${{ matrix.macos }}
+    strategy:
+      matrix: 
+        macos: ['macos-latest']
+        scheme: ['SlothCreator']
+        command: ['build']
+        platform: ['iOS']
     steps:
-    - uses: actions/checkout@v3
-    - name: Show eligible build destinations for SlothCreator
-      run: xcodebuild -showdestinations -scheme SlothCreator
-    - name: Build and test ( iOS 15.0)
-      run: xcodebuild -scheme SlothCreator -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro'
+    - name: Double-check macOS version (${{ matrix.macos }})
+      run: sw_vers
+    - name: Code Checkout
+      uses: actions/checkout@v3
+    - name: Check xcodebuild version
+      run: xcodebuild -version
+    - name: Check xcode embedded SDKs
+      run: xcodebuild -showsdks
+    - name: Show buildable schemes
+      run: xcodebuild -list
+    - name: Show eligible build destinations for ${{ matrix.scheme }}
+      run: xcodebuild -showdestinations -scheme ${{ matrix.scheme }}
+    - uses: mxcl/xcodebuild@v1.9.2
+      with:
+          platform: ${{ matrix.platform }}
+          scheme: ${{ matrix.scheme }}
+          action: ${{ matrix.command }}
+          upload-logs: always

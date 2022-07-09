@@ -1,6 +1,6 @@
 # SlothCreator: Building DocC Documentation in Xcode
 
-![CI](https://github.com/SomeshKarthikK/tesing-docc/blob/main/.github/workflows/swift.yml/badge.svg)
+![CI](https://github.com/SomeshKarthikK/tesing-docc/actions/workflows/swift.yml/badge.svg)
 
 Build DocC documentation for a Swift package that contains a DocC Catalog.
 

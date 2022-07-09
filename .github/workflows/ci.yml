@@ -24,6 +24,9 @@ jobs:
       run: sw_vers
     - name: Code Checkout
       uses: actions/checkout@v3
+    - uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: ${{ matrix.xcode }}
     - name: Check xcodebuild version
       run: xcodebuild -version
     - name: Check xcode embedded SDKs

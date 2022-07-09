@@ -37,3 +37,12 @@ jobs:
           scheme: ${{ matrix.scheme }}
           action: ${{ matrix.command }}
           upload-logs: always
+  SwiftLint:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: GitHub Action for SwiftLint
+        uses: norio-nomura/action-swiftlint@3.2.1
+        env:
+          DIFF_BASE: ${{ github.base_ref }}
+      

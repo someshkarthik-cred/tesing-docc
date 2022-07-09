@@ -24,7 +24,9 @@ let package = Package(
     ],
     dependencies: [
         // other dependencies
-        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+        #if swift(>=5.6)
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0")
+        #endif
     ],
     targets: [
         .target(

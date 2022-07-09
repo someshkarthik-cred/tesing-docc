@@ -1,6 +1,6 @@
 # SlothCreator: Building DocC Documentation in Xcode
 
-[<img src="https://github.com/SomeshKarthikK/tesing-docc/workflows/Swift/badge.svg" />](https://github.com/SomeshKarthikK/tesing-docc/actions?query=workflow%3ACI)
+[<img src="https://github.com/SomeshKarthikK/tesing-docc/workflows/CI/badge.svg" />](https://github.com/SomeshKarthikK/tesing-docc/actions?query=workflow%3ACI)
 
 Build DocC documentation for a Swift package that contains a DocC Catalog.
 

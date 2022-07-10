@@ -14,7 +14,10 @@ jobs:
       - name: Create XCFramework
         id: framework_builder
         run: |
-          path_to_xcframework=$(./Scripts/create-xcframework.sh 'SlothCreator')
+          path_from_script=`/bin/mktemp`
+          /Scripts/create-xcframework.sh 'SlothCreator' -l $path_from_script
+          path_to_xcframework=`cat $path_from_script`
+          rm -f $path_from_script
           echo ::set-output name=xc_framework::$path_to_xcframework
       - uses: actions/upload-artifact@v3
         with:

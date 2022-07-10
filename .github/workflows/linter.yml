@@ -23,6 +23,9 @@ jobs:
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
+        
+      - name: Install Swiftlint
+        run: brew install swiftlint 
     
       - name: Run linters
         uses: wearerequired/lint-action@v2

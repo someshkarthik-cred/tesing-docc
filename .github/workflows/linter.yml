@@ -25,7 +25,9 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Install Swiftlint
-        run: brew install swiftlint 
+        run: |
+          set -o pipefail
+          export PATH="$PATH:/opt/homebrew/bin"
     
       - name: Run linters
         uses: wearerequired/lint-action@v2

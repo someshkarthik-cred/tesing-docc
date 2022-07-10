@@ -24,7 +24,7 @@ jobs:
           
           touch $path_from_script
           
-          /Scripts/create-xcframework.sh 'SlothCreator' -l $path_from_script
+          ./Scripts/create-xcframework.sh 'SlothCreator' -l $path_from_script
           path_to_xcframework=`cat $path_from_script`
           rm -f $path_from_script
           echo ::set-output name=xc_framework::$path_to_xcframework

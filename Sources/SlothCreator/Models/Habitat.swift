@@ -24,10 +24,10 @@
 /// ```
 public struct Habitat {
     /// An indicator of whether the habitat is humid.
-    public var isHumid: Bool
+    public var isHumid:Bool
 
     /// An indicator of whether the habitat is warm.
-    public var isWarm: Bool
+    public var isWarm:Bool
 
     /// An indicator of how comfortable a sloth might find the habitat.
     public var comfortLevel: Int {

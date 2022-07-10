@@ -1,17 +1,16 @@
 name: Test Swift Package Manager Integration
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-
-  push:
-    branches:
-    - main
+  workflow_run:
+    workflows: ["CI"]
+    branches: [main]
+    types:
+      - completed
 
 jobs:
-
-  SPM:
+  on-success:
     runs-on: macos-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
     - uses: actions/checkout@v3
     - uses: n1hility/cancel-previous-runs@v2
@@ -26,3 +25,8 @@ jobs:
     - name: Test Swift Package Manager Integration
       run: |
         Scripts/test_spm_integration.sh
+  on-failure:
+    runs-on: macos-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: echo 'Testing SPM integration flow failed'

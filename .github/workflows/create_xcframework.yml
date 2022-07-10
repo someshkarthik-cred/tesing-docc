@@ -11,4 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Create XCFramework
-        uses: unsignedapps/swift-create-xcframework@v1
+        run: |
+          Scripts/create-xcframework.sh

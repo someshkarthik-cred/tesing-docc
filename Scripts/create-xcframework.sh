@@ -62,7 +62,11 @@ for PLATFORM in "iOS" "iOS Simulator"; do
 
 done
 
+XC_FRAMEWORK=$BUILd_FOLDER/$NAME.xcframework
+
 xcodebuild -create-xcframework \
 -framework $BUILd_FOLDER/Release-iphoneos.xcarchive/Products/usr/local/lib/$NAME.framework \
 -framework $BUILd_FOLDER/Release-iphonesimulator.xcarchive/Products/usr/local/lib/$NAME.framework \
--output $BUILd_FOLDER/$NAME.xcframework
+-output $XC_FRAMEWORK
+
+echo $XC_FRAMEWORK

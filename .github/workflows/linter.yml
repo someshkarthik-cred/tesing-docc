@@ -19,12 +19,12 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v3
         
-      - name: Install Swiftlint
+      - name: Settings Home Brew Path
         run: |
           set -o pipefail
           export PATH="$PATH:/opt/homebrew/bin"
     
-      - name: Run linters
+      - name: Auto Correcting Lint Issues
         uses: wearerequired/lint-action@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -34,4 +34,8 @@ jobs:
           swiftlint_auto_fix: true
           git_name: ${{ github.event.pusher.name }}
           git_email: ${{ github.event.pusher.email }}
+          
+      - name: Verifing lint checks
+        run: |
+          swiftlint lint --strict | sed -E 's/^(.*):([0-9]+):([0-9]+): (warning|error|[^:]+): (.*)/::\4 title=Lint error,file=\1,line=\2,col=\3::\5\n\1:\2:\3/'
           

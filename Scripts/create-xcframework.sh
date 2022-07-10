@@ -3,15 +3,6 @@
 set -x
 set -e
 
-# Fetch the path of output file to send the output directory back to client
-# while getopts "l:" OPT
-# do
-#     case $OPT in
-#       l) output_file="${OPTARG}"
-#          ;;
-#     esac
-# done
-
 BUILd_FOLDER="Build"
 
 rm -rf $BUILd_FOLDER
@@ -79,4 +70,8 @@ xcodebuild -create-xcframework \
 -framework $BUILd_FOLDER/Release-iphonesimulator.xcarchive/Products/usr/local/lib/$NAME.framework \
 -output $XC_FRAMEWORK
 
-echo $XC_FRAMEWORK > $OUTPUT_FILE
+zip -r $XC_FRAMEWORK.zip $XC_FRAMEWORK
+
+rm -rf $XC_FRAMEWORK
+
+echo $XC_FRAMEWORK.zip > $OUTPUT_FILE

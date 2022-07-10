@@ -24,7 +24,6 @@ jobs:
 
     - name: Lint Cocoapods
       run: |
-        brew install cocoapods
         pod lib lint SlothCreator.podspec --allow-warnings --verbose
     - name: Test Cocoapods Integration
       run: |

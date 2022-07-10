@@ -5,6 +5,11 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_run:
+    workflows: ["Lint"]
+    branches: ["*"]
+    types:
+      - completed
   schedule:
     - cron: 0 0 * * *
     

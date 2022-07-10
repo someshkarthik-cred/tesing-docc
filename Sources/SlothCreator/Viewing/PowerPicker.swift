@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+
+var mainBundle: Bundle {
+    #if SWIFT_PACKAGE
+    return Bundle.module
+    #else
+    return Bundle.main
+    #endif
+}
+
 /// A view to configure a sloth's power.
 ///
 /// ## Topics
@@ -29,7 +38,7 @@ public struct PowerPicker: View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
             ForEach(Sloth.Power.allCases, id: \.rawValue) { power in
                 Button(action: { self.power = power }) {
-                    Image("\(power.rawValue)-power", bundle: Bundle.module)
+                    Image("\(power.rawValue)-power", bundle: mainBundle)
                         .resizable()
                         .scaledToFit()
                 }.padding()

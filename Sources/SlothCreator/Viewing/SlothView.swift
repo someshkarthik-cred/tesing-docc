@@ -29,7 +29,7 @@ public struct SlothView: View {
     }
 
     public var body: some View {
-        Image("\(sloth.power)-sloth", bundle: Bundle.module)
+        Image("\(sloth.power)-sloth", bundle: mainBundle)
             .resizable()
             .scaledToFit()
             .padding()

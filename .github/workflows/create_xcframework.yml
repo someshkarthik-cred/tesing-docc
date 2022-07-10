@@ -3,7 +3,8 @@ name: Create Release
 on:
   push: 
     branches: ["main"]
-
+  workflow_dispatch:
+  
 jobs:
   create_xcframework:
     name: Create XCFramework
@@ -11,5 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Create XCFramework
+        id: framework_builder
         run: |
-          Scripts/create-xcframework.sh 'SlothCreator'
+          Scripts/create-xcframework.sh 'SlothCreator' > path_to_xc_framework
+          echo ::set-output name=xc_framework::$path_to_xc_framework
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: ${{ steps.framework_builder.outputs.xc_framework }}

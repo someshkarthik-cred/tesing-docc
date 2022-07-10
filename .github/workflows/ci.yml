@@ -14,10 +14,11 @@ concurrency:
 
 jobs:
   build:
-    name:  ${{ matrix.platform }} ${{ matrix.macos }})
+    name: ${{ matrix.command }} on  ${{ matrix.platform }} (xcode ${{ matrix.xcode }}, ${{ matrix.macos }})
     runs-on: ${{ matrix.macos }}
     strategy:
-      matrix: 
+      matrix:
+        xcode: ['13.2.1', '13.0']
         macos: ['macos-latest']
         scheme: ['SlothCreator']
         command: ['build']
@@ -27,9 +28,12 @@ jobs:
       run: sw_vers
     - name: Code Checkout
       uses: actions/checkout@v3
+    - uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: ${{ matrix.xcode }}
     - name: Check xcodebuild version
       run: xcodebuild -version
-    - name: Check xcode embedded SDKs
+    - name: Check xcode embedded SDKs 123
       run: xcodebuild -showsdks
     - name: Show buildable schemes
       run: xcodebuild -list
@@ -37,7 +41,20 @@ jobs:
       run: xcodebuild -showdestinations -scheme ${{ matrix.scheme }}
     - uses: mxcl/xcodebuild@v1.9.2
       with:
+          xcode: ${{ matrix.xcode }}
           platform: ${{ matrix.platform }}
           scheme: ${{ matrix.scheme }}
           action: ${{ matrix.command }}
           upload-logs: always
+          
+  swiftlint:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+    - name: Code Checkout
+      uses: actions/checkout@v3
+    - name: swiftlint
+      run: |
+        set -o pipefail
+        export PATH="$PATH:/opt/homebrew/bin"
+        swiftlint lint --strict | sed -E 's/^(.*):([0-9]+):([0-9]+): (warning|error|[^:]+): (.*)/::\4 title=Lint error,file=\1,line=\2,col=\3::\5\n\1:\2:\3/'

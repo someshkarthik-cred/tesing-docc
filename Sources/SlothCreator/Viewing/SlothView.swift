@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A view that displays a sloth.
-*/
+ Abstract:
+ A view that displays a sloth.
+ */
 
 import SwiftUI
 
@@ -22,12 +22,12 @@ import SwiftUI
 /// ```
 public struct SlothView: View {
     @Binding var sloth: Sloth
-    
+
     /// Creates a view that displays the specified sloth.
     public init(sloth: Binding<Sloth>) {
         self._sloth = sloth
     }
-    
+
     public var body: some View {
         Image("\(sloth.power)-sloth", bundle: Bundle.module)
             .resizable()
@@ -38,10 +38,9 @@ public struct SlothView: View {
 
 struct SlothView_Previews: PreviewProvider {
     @State static var sloth = Sloth(name: "Super Sloth", color: .green, power: .ice)
-    
+
     static var previews: some View {
         SlothView(sloth: $sloth)
             .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
     }
 }
-

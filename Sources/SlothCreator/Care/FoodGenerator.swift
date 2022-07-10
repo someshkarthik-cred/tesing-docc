@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A utility type that generates food.
-*/
+ Abstract:
+ A utility type that generates food.
+ */
 
 /// A type that generates food.
 ///

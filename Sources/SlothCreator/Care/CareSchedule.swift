@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A representation of a schedule of events that provide care for a sloth.
-*/
+ Abstract:
+ A representation of a schedule of events that provide care for a sloth.
+ */
 
 import Foundation
 
@@ -11,7 +11,9 @@ import Foundation
 public struct CareSchedule {
     /// The actions a sloth performs at scheduled times.
     public var events: [(Date, Event)] = []
-    
+
+    public var someCode: Int =   0
+
     /// An action a sloth can perform.
     public enum Event {
         /// A meal that a sloth usually eats at the start of their day, in the morning.
@@ -25,7 +27,7 @@ public struct CareSchedule {
         /// An activity to perform.
         case activity(Activity)
     }
-    
+
     /// Creates a care schedule with the specified events.
     /// - Parameter events: The actions a sloth performs at scheduled times.
     public init(events: [(Date, Event)] = []) {

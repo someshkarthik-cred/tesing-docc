@@ -18,6 +18,7 @@ jobs:
 
   build:
     name: ${{ matrix.command }} on  ${{ matrix.platform }} (xcode ${{ matrix.xcode }}, ${{ matrix.macos }})
+    needs: cleanup
     runs-on: ${{ matrix.macos }}
     strategy:
       matrix:

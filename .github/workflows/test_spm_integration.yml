@@ -25,4 +25,4 @@ jobs:
 
     - name: Test Swift Package Manager Integration
       run: |
-        Scripts/test-spm-integration.sh
+        Scripts/test_spm_integration.sh

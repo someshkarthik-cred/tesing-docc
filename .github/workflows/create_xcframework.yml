@@ -26,9 +26,10 @@ jobs:
           
           ./Scripts/create-xcframework.sh 'SlothCreator' $path_from_script
           path_to_xcframework=`cat $path_from_script`
+          file_name=`basename $path_to_xcframework`
           rm -f $path_from_script
-          echo ::set-output name=xc_framework::$path_to_xcframework
-          echo ::set-output name=path_to_xcframework::${ basename $path_to_xcframework }
+          echo ::set-output name=path_to_xcframework::$path_to_xcframework
+          echo ::set-output name=file_name::$file_name
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ steps.framework_builder.outputs.file_name }}

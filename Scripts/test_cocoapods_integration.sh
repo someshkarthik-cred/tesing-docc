@@ -47,6 +47,10 @@ let package = Package(
 
 " > Package.swift
 
+swift package update
+
+swift package generate-xcodeproj
+
 # Create a Podfile with our pod as dependency.
 echo "platform :ios, '14.0'
 target '$PROJECT_NAME' do

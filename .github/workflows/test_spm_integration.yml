@@ -3,7 +3,6 @@ name: Test Swift Package Manager Integration
 on:
   workflow_run:
     workflows: ["CI"]
-    branches: [main]
     types:
       - completed
 

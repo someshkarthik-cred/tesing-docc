@@ -44,8 +44,9 @@ let package = Package(
         .target(
             name: \"TempProject\",
             dependencies: [
-                .product(name: \"SlothCreator\", package: \"SlothCreator\"),
+                .product(name: \"SlothCreator\", package: \"SlothCreator\")
             ]
+        )
     ]
 )
 " > Package.swift

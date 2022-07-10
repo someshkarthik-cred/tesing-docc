@@ -5,18 +5,22 @@ on:
     branches: [ "*" ]
   pull_request:
     branches: [ "main" ]
-
-concurrency:
-  group: build-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
       
 permissions:
   checks: write
   contents: write
 
 jobs:
+  cleanup:
+    runs-on: macos-latest
+    steps:
+    - uses: n1hility/cancel-previous-runs@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
   run-linters:
     name: Run linters
+    needs: cleanup
     runs-on: macos-latest
 
     steps:

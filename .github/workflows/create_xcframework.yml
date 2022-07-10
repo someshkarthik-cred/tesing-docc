@@ -28,7 +28,8 @@ jobs:
           path_to_xcframework=`cat $path_from_script`
           rm -f $path_from_script
           echo ::set-output name=xc_framework::$path_to_xcframework
+          echo ::set-output name=path_to_xcframework::${ basename #path_to_xcframework }
       - uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
-          path: ${{ steps.framework_builder.outputs.xc_framework }}
+          name: ${{ steps.framework_builder.outputs.file_name }}
+          path: ${{ steps.framework_builder.outputs.path_to_xcframework }}

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 var mainBundle: Bundle {
     #if SWIFT_PACKAGE
     return Bundle.module

@@ -55,7 +55,7 @@ swift package generate-xcodeproj
 echo "platform :ios, '14.0'
 target '$PROJECT_NAME' do
 use_frameworks!
-pod 'SlothCreator'
+pod 'SlothCreator', :path=>'../'
 end
 " >> Podfile
 

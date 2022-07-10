@@ -70,8 +70,8 @@ xcodebuild -create-xcframework \
 -framework $BUILd_FOLDER/Release-iphonesimulator.xcarchive/Products/usr/local/lib/$NAME.framework \
 -output $XC_FRAMEWORK
 
-zip -r $XC_FRAMEWORK.zip $XC_FRAMEWORK
+zip -r $NAME.xcframework.zip $XC_FRAMEWORK
 
 rm -rf $XC_FRAMEWORK
 
-echo $XC_FRAMEWORK.zip > $OUTPUT_FILE
+echo $NAME.xcframework.zip > $OUTPUT_FILE

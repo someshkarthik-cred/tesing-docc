@@ -1,7 +1,7 @@
 // swift-tools-version:5.5
 /*
  See LICENSE folder for this sample’s licensing information.
- 
+
  Abstract:
  Package manifest for SlothCreator.
  */

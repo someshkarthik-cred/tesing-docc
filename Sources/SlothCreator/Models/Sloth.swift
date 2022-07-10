@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-The model type for a sloth.
-*/
+ Abstract:
+ The model type for a sloth.
+ */
 
 import Foundation
 
@@ -25,16 +25,16 @@ import Foundation
 /// }
 /// ```
 public struct Sloth {
-    
+
     /// The name of the sloth.
     public var name: String
-    
+
     /// The color of the sloth.
     public var color: Color
-    
+
     /// The power of the sloth.
     public var power: Power
-    
+
     /// The energy level of the sloth.
     ///
     /// Sloths have a very low metabolic rate, so their energy level is often low as well. It's
@@ -44,12 +44,12 @@ public struct Sloth {
     /// You can increase the sloth's energy level by asking them to
     /// ``eat(_:quantity:)`` or ``sleep(in:for:)``.
     public var energyLevel = 10
-    
+
     /// The care schedule of the sloth.
     ///
     /// A care schedule maintains the health and happiness of the sloth.
     public var schedule = CareSchedule()
-    
+
     /// Creates a sloth with the specified name and color.
     ///
     /// - Parameters:
@@ -61,7 +61,7 @@ public struct Sloth {
         self.color = color
         self.power = power
     }
-    
+
     /// Eat the provided specialty sloth food.
     ///
     /// Sloths love to eat while they move very slowly through their rainforest habitats. They
@@ -94,7 +94,7 @@ public struct Sloth {
         energyLevel += food.energy * quantity
         return energyLevel
     }
-    
+
     /// Sleep in the specified habitat for a number of hours.
     ///
     /// Sloths need to sleep for a large number of hours each day because of their low metabolic
@@ -122,4 +122,3 @@ public struct Sloth {
         return energyLevel
     }
 }
-

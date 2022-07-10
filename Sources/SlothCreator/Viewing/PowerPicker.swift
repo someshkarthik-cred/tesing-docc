@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A view to configure a sloth's power.
-*/
+ Abstract:
+ A view to configure a sloth's power.
+ */
 
 import SwiftUI
 
@@ -17,14 +17,14 @@ import SwiftUI
 /// - ``body``
 public struct PowerPicker: View {
     @Binding var power: Sloth.Power
-    
+
     /// Creates a view that configures a sloth's power.
     ///
     /// - Parameter power: A binding to the selected power.
     public init(power: Binding<Sloth.Power>) {
         self._power = power
     }
-    
+
     public var body: some View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
             ForEach(Sloth.Power.allCases, id: \.rawValue) { power in
@@ -40,7 +40,7 @@ public struct PowerPicker: View {
 
 struct PowerPicker_Previews: PreviewProvider {
     @State static var power = Sloth.Power.ice
-    
+
     static var previews: some View {
         PowerPicker(power: $power)
             .previewDevice(PreviewDevice(rawValue: "iPhone 12"))

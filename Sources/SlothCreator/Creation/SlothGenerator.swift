@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A utility type that generates sloths.
-*/
+ Abstract:
+ A utility type that generates sloths.
+ */
 
 /// A type that generates sloths.
 public protocol SlothGenerator {

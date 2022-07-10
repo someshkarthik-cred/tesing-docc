@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-The model type for the power of a sloth.
-*/
+ Abstract:
+ The model type for the power of a sloth.
+ */
 
 import Foundation
 
@@ -40,7 +40,7 @@ extension Sloth {
         /// Standard sloths are still extraordinary creatures. Their claws have the power of holding onto tree branches,
         /// rocky outcrops, and outstretched arms. They might be slow, but they are still magnificent.
         case none
-        
+
         public var description: String {
             return rawValue
         }

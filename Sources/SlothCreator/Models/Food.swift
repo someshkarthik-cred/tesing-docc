@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-The model type for the foods sloths eat.
-*/
+ Abstract:
+ The model type for the foods sloths eat.
+ */
 
 import Foundation
 
@@ -29,13 +29,13 @@ extension Sloth {
     public struct Food {
         /// The name of the food.
         public let name: String
-        
+
         /// The amount of energy the food contains.
         ///
         /// When sloths metabolize the food they eat, their ``Sloth/energyLevel``
         /// increases by the amount of energy the food contains.
         public let energy: Int
-        
+
         /// Creates food with the specified name and energy level.
         /// - Parameters:
         ///   - name: The name of the food.
@@ -50,11 +50,10 @@ extension Sloth {
 extension Sloth.Food {
     /// A spindly stick.
     public static let twig = Sloth.Food(name: "Twig", energy: 1)
-    
+
     /// A regular-sized leaf.
     public static let regularLeaf = Sloth.Food(name: "Regular Leaf", energy: 2)
-    
+
     /// A large leaf.
     public static let largeLeaf = Sloth.Food(name: "Large Leaf", energy: 5)
 }
-

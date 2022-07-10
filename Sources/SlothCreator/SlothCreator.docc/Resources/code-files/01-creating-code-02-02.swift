@@ -1,15 +1,15 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A view to customize a sloth.
-*/
+ Abstract:
+ A view to customize a sloth.
+ */
 
 import SwiftUI
 import SlothCreator
 
 struct CustomizedSlothView: View {
-    
+
     var body: some View {
         Text("Hello, World!")
     }

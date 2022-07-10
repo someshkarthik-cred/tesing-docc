@@ -1,9 +1,9 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-An activity a sloth may perform.
-*/
+ Abstract:
+ An activity a sloth may perform.
+ */
 
 /// A type that declares an activity a Sloth can perform.
 public protocol Activity {

@@ -33,6 +33,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           auto_fix: true
           swiftlint: true
+          swiftlint_args: "--autocorrect --format"
           swiftlint_auto_fix: true
           git_name: ${{ github.event.pusher.name }}
           git_email: ${{ github.event.pusher.email }}

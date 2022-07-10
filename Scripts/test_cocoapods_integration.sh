@@ -60,7 +60,7 @@ end
 " >> Podfile
 
 # Install the pods.
-pod install
+bundle exec pod check || bundle exec pod install
 
 # Archive for generic iOS device
 echo '############# Archive for generic iOS device ###############'

@@ -15,6 +15,13 @@ jobs:
         id: framework_builder
         run: |
           path_from_script=`/bin/mktemp`
+          
+          # if dir already exits delete it before proceed
+          rm -rf $path_from_script
+          
+          #create the dir, since we are deleting it in the previous step
+          mkdir $path_from_script
+          
           /Scripts/create-xcframework.sh 'SlothCreator' -l $path_from_script
           path_to_xcframework=`cat $path_from_script`
           rm -f $path_from_script

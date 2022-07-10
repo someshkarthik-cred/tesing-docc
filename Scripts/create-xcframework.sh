@@ -16,19 +16,14 @@ for PLATFORM in "iOS" "iOS Simulator"; do
 
     case $PLATFORM in
     "iOS")
-    RELEASE_FOLDER="$BUILd_FOLDER/Release-iphoneos"
+    RELEASE_FOLDER="Release-iphoneos"
     ;;
     "iOS Simulator")
-    RELEASE_FOLDER="$BUILd_FOLDER/Release-iphonesimulator"
+    RELEASE_FOLDER="Release-iphonesimulator"
     ;;
     esac
 
-    ARCHIVE_PATH=$RELEASE_FOLDER
-
-    # Rewrite Package.swift so that it declaras dynamic libraries, since the approach does not work with static libraries
-    perl -i -p0e 's/type: .static,//g' Package.swift
-    perl -i -p0e 's/type: .dynamic,//g' Package.swift
-    perl -i -p0e 's/(library[^,]*,)/$1 type: .dynamic,/g' Package.swift
+    ARCHIVE_PATH=$BUILd_FOLDER/$RELEASE_FOLDER
 
     xcodebuild archive -scheme $NAME \
             -destination "generic/platform=$PLATFORM" \

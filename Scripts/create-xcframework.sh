@@ -4,13 +4,13 @@ set -x
 set -e
 
 # Fetch the path of output file to send the output directory back to client
-while getopts "l:" OPT
-do
-    case $OPT in
-      l) output_file="${OPTARG}"
-         ;;
-    esac
-done
+# while getopts "l:" OPT
+# do
+#     case $OPT in
+#       l) output_file="${OPTARG}"
+#          ;;
+#     esac
+# done
 
 BUILd_FOLDER="Build"
 
@@ -18,6 +18,7 @@ rm -rf $BUILd_FOLDER
 
 # Pass scheme name as the first argument to the script
 NAME=$1
+OUTPUT_FILE=$2
 
 # Build the scheme for all platforms that we plan to support
 for PLATFORM in "iOS" "iOS Simulator"; do
@@ -78,4 +79,4 @@ xcodebuild -create-xcframework \
 -framework $BUILd_FOLDER/Release-iphonesimulator.xcarchive/Products/usr/local/lib/$NAME.framework \
 -output $XC_FRAMEWORK
 
-echo $XC_FRAMEWORK > $output_file
+echo $XC_FRAMEWORK > $OUTPUT_FILE

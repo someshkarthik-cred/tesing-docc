@@ -1,0 +1,14 @@
+
+name: Create Release
+on:
+  push: 
+    tags:
+      - '*'
+jobs:
+  create_xcframework:
+    name: Create XCFramework
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create XCFramework
+        uses: unsignedapps/swift-create-xcframework@v1

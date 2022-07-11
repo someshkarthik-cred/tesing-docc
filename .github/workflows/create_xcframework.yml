@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        type: input
+        type: string
         description: Version
         required: true
 jobs:

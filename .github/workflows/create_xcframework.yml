@@ -5,12 +5,7 @@ on:
     tags:
        - '[0-9]+.[0-9]+.[0-9]+'
        - '[0-9]+.[0-9]+.[0-9]+rc[0-9]+'
-  workflow_dispatch:
-    inputs:
-      tag:
-        type: string
-        description: Version
-        required: true
+       
 jobs:
   create_xcframework:
     name: Create XCFramework
@@ -58,7 +53,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ inputs.tag }} || ${{ github.ref }}
+          tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           body_path: ./release_notes.md
           draft: false
@@ -89,7 +84,7 @@ jobs:
     - name: Deploy to Cocoapods
       run: |
         set -eo pipefail
-        export LIB_VERSION=${{ inputs.tag }} || $(git describe --tags `git rev-list --tags --max-count=1`)
+        export LIB_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
         pod lib lint --allow-warnings
         pod trunk push --allow-warnings
       env:

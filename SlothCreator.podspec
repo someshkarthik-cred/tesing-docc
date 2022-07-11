@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SlothCreator'
-  s.version          = '0.0.2'
+  s.version          = ENV['LIB_VERSION'] || '0.0.2'
   s.summary          = "jfnjwefw efj wekf wef we"
   s.homepage         = 'https://github.com/SomeshKarthikK/tesing-docc'
     s.license          = { :type => 'Apache-2.0', :file => 'LICENSE/LICENSE.txt' }

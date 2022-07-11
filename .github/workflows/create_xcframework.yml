@@ -77,17 +77,17 @@ jobs:
           asset_name: SlothCreator.xcframework.zip
           asset_content_type: application/zip
 
-#   cocoapods:
-#     name: Deploy to Cocoapods
-#     runs-on: macos-latest
-#     steps:
-#     - uses: actions/checkout@v3
-#     - name: Deploy to Cocoapods
-#       run: |
-#         set -eo pipefail
-#         export LIB_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
-#         pod lib lint --allow-warnings
-#         pod trunk push --allow-warnings
-#       env:
-#         COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+  cocoapods:
+    name: Deploy to Cocoapods
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy to Cocoapods
+      run: |
+        set -eo pipefail
+        export LIB_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
+        pod lib lint --allow-warnings
+        pod trunk push --allow-warnings
+      env:
+        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
       

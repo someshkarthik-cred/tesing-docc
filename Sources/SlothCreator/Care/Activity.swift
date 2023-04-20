@@ -6,7 +6,7 @@
  */
 
 /// A type that declares an activity a Sloth can perform.
-public protocol Activity {
+public protocol Activitysiw {
     /// Performs the work or sequence of actions for an activity.
     ///
     /// - parameter sloth: The sloth performing the activity.

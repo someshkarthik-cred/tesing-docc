@@ -18,19 +18,28 @@ jobs:
     - name: Check file size
       id: bulky_files
       run: |
+        output=""
+        has_exceeded_limit=0
         for file in ${{ steps.list_changed_files.outputs.output_files }}; do
           file_size=$(du -k "$file" | cut -f1)
           if [ "$file_size" -gt 100 ]; then
             echo "The file $file is larger than 100KB (size: ${file_size}KB)."
             echo "::error::The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging."
-            echo "files=The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging." >> $GITHUB_OUTPUT
-            exit 1
+            output+="The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging\n"
+            has_exceeded_limit=1
           else
             echo "The file $file is within the size limit (size: ${file_size}KB)."
           fi
         done
+        
+        if [ $has_exceeded_limit -eq 1 ]; then
+        echo files=$output >> $GITHUB_OUTPUT
+        exit 1;
+        else
+        exit 0;
+        fi
     - name: Comment on pull request
-      if: always()
+      if: ${{ failure() }}
       uses: actions/github-script@v4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

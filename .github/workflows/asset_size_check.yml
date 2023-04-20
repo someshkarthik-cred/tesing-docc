@@ -35,7 +35,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const result = `#### Check File Size\n\n${steps.check_file_size.outputs.stdout}`;
+          const result = `#### Check File Size\n\n${{ steps.check_file_size.outputs.stdout }}`;
           const payload = {
             owner: context.repo.owner,
             repo: context.repo.repo,

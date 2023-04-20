@@ -14,7 +14,7 @@ jobs:
     - name: List changed files
       id: list_changed_files
       run: |
-        echo "output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp3' '*.wav' '*.lottie')" >> $GITHUB_OUTPUT
+        echo output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp3' '*.wav' '*.lottie') >> $GITHUB_OUTPUT
     - name: Check file size
       id: bulky_files
       run: |

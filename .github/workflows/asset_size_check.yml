@@ -27,35 +27,19 @@ jobs:
             echo "The file $file is within the size limit (size: ${file_size}KB)."
           fi
         done
-    - name: Post comment
+    - name: Comment on pull request
       if: always()
       uses: actions/github-script@v4
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const { data } = await github.rest.pulls.get({
+          const result = `#### Check File Size\n\n${steps.check_file_size.outputs.stdout}`;
+          const payload = {
             owner: context.repo.owner,
             repo: context.repo.repo,
-            pull_number: context.payload.pull_request.number
-          })
-          const { html_url } = data
-          let message = '## File Size Check\n'
-          const job = context.payload.workflow.jobs.check_file_size
-          for (const step of job.steps) {
-            if (step.id === 'check_file_size') {
-              message += `### ${step.name}\n`
-              message += '```\n'
-              message += step.outputs.stdout
-              message += '\n```\n'
-            }
-          }
-          if (job.status === 'success') {
-            message += '**All files are within the size limit.**'
-          } else {
-            message += '**Some files are larger than the size limit.**'
-          }
-          await github.rest.issues.createComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: context.payload.pull_request.number,
-            body: message + `\n\nView the [workflow run](${html_url}) for more details.`
-          })
+            issue_number: context.issue.number,
+            body: result
+          };
+          return github.issues.createComment(payload);

@@ -17,8 +17,8 @@ jobs:
         echo "::set-output name=files::$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp3' '*.wav' '*.lottie')"
     - name: Check file size
       run: |
-        for file in "${{ steps.list_changed_files.outputs.files }}"; do
-          file_size=$(du -k "{$file}" | cut -f1)
+        for file in ${{ steps.list_changed_files.outputs.files }}; do
+          file_size=$(du -k "$file" | cut -f1)
           if [ "$file_size" -gt 100 ]; then
             echo "The file $file is larger than 100KB (size: ${file_size}KB)."
             echo "::error::The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging."

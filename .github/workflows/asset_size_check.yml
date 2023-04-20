@@ -23,6 +23,7 @@ jobs:
           if [ "$file_size" -gt 100 ]; then
             echo "The file $file is larger than 100KB (size: ${file_size}KB)."
             echo "::error::The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging."
+            echo "::set-output name=files::The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging."
             exit 1
           else
             echo "The file $file is within the size limit (size: ${file_size}KB)."
@@ -36,7 +37,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const result = `#### Check File Size\n\n${{ steps.bulky_files.outputs.stdout }}`;
+          const result = `#### Check File Size\n\n${{ steps.bulky_files.outputs.files }}`;
           const payload = {
             owner: context.repo.owner,
             repo: context.repo.repo,

@@ -37,7 +37,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const result = `#### Check File Size\n\n${{ steps.bulky_files.outputs.* }}`;
+          const result = `#### Check File Size\n\n${{ join(steps.bulky_files.outputs.*, '\n') }}`;
           const payload = {
             owner: context.repo.owner,
             repo: context.repo.repo,

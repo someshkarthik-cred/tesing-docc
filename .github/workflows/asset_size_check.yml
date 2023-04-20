@@ -24,7 +24,8 @@ jobs:
           file_size=$(du -k "$file" | cut -f1)
           if [ "$file_size" -gt 100 ]; then
             echo "The file $file is larger than 100KB (size: ${file_size}KB)."
-            curl -sSL -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -X POST -H "Accept: application/vnd.github.v3+json" -d '{"body": "The file `'"$file"'` is larger than 100KB (size: '"${file_size}"'KB). Please reduce the file size before merging."}' "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments"
+            line_number=$(grep -n "$file" $GITHUB_WORKSPACE/README.md | cut -d: -f1)
+            curl -sSL -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -X POST -H "Accept: application/vnd.github.v3+json" -d '{"body": "The file `'"$file"'` is '"${file_size}"'KB in size."}' "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/comments?position=${line_number}"
             output+="The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging\n"
             has_exceeded_limit=1
           else

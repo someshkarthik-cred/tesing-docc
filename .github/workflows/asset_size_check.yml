@@ -1,0 +1,27 @@
+name: Check File Size
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  check_file_size:
+    runs-on: macos-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: List changed files
+      id: list_changed_files
+      run: |
+        echo "::set-output name=files::$(git diff --name-only origin/${{ github.base_ref }} --diff-filter=ACM -- '*.m4a' '*.mp3' '*.wav' '*.lottie')"
+    - name: Check file size
+      run: |
+        for file in "${{ steps.list_changed_files.outputs.files }}"; do
+          file_size=$(du -k "{$file}" | cut -f1)
+          if [ "$file_size" -gt 100 ]; then
+            echo "The file $file is larger than 100KB (size: ${file_size}KB)."
+            echo "::error::The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging."
+            exit 1
+          else
+            echo "The file $file is within the size limit (size: ${file_size}KB)."
+          fi
+        done

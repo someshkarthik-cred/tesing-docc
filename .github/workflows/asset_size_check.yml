@@ -16,6 +16,7 @@ jobs:
       run: |
         echo "::set-output name=files::$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp3' '*.wav' '*.lottie')"
     - name: Check file size
+      id: bulky_files
       run: |
         for file in ${{ steps.list_changed_files.outputs.files }}; do
           file_size=$(du -k "$file" | cut -f1)
@@ -35,7 +36,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const result = `#### Check File Size\n\n${{ steps.check_file_size.outputs.stdout }}`;
+          const result = `#### Check File Size\n\n${{ steps.bulky_files.outputs.stdout }}`;
           const payload = {
             owner: context.repo.owner,
             repo: context.repo.repo,

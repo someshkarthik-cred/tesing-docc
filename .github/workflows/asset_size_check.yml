@@ -18,7 +18,7 @@ jobs:
     - name: Check file size
       id: bulky_files
       run: |
-        for file in ${{ steps.list_changed_files.outputs.files }}; do
+        for file in "${{ steps.list_changed_files.outputs.files }}"; do
           file_size=$(du -k "$file" | cut -f1)
           if [ "$file_size" -gt 100 ]; then
             echo "The file $file is larger than 100KB (size: ${file_size}KB)."

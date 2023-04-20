@@ -14,7 +14,7 @@ jobs:
     - name: List changed files
       id: list_changed_files
       run: |
-        echo "::set-output name=files::$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp3' '*.wav' '*.lottie')"
+        echo "files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp3' '*.wav' '*.lottie')" >> $GITHUB_OUTPUT
     - name: Check file size
       id: bulky_files
       run: |
@@ -23,7 +23,7 @@ jobs:
           if [ "$file_size" -gt 100 ]; then
             echo "The file $file is larger than 100KB (size: ${file_size}KB)."
             echo "::error::The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging."
-            echo "::set-output name=files::The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging."
+            echo "files=The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging." >> $GITHUB_OUTPUT
             exit 1
           else
             echo "The file $file is within the size limit (size: ${file_size}KB)."
@@ -37,7 +37,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const result = `#### Check File Size\n\n${{ join(steps.bulky_files.outputs.*, '\n') }}`;
+          const result = `#### Check File Size\n\n${{ steps.bulky_files.outputs.files }}`;
           const payload = {
             owner: context.repo.owner,
             repo: context.repo.repo,

@@ -24,7 +24,7 @@ jobs:
           file_size=$(du -k "$file" | cut -f1)
           if [ "$file_size" -gt 100 ]; then
             echo "The file $file is larger than 100KB (size: ${file_size}KB)."
-            echo "::error file=$file,line=1::The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging."
+            echo "::error::The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging. (filename: $file, line: 1)"
             output+="The file $file is larger than 100KB (size: ${file_size}KB). Please reduce the file size before merging\n"
             has_exceeded_limit=1
           else

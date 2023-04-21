@@ -28,7 +28,6 @@ jobs:
         IFS=$'\n'
         echo "${{ env.output_files }}" | while read file
         do
-          echo $file
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           if [ "$file_size" -gt 100 ]; then
@@ -41,6 +40,7 @@ jobs:
         
         if [ $has_exceeded_limit -eq 1 ]; then
         table_output=$(cat file_table.md)
+        echo $table_output
         echo "table_output<<EOF" >> $GITHUB_ENV
         echo "$table_output" >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV

@@ -24,8 +24,10 @@ jobs:
         echo "File | Size (KB) | Link | Status" > file_table.md
         echo "--- | --- | --- | ---" >> file_table.md
         has_exceeded_limit=0
-        IFS='\n' read -ra splitted_output_files <<< ${{ env.output_files }}
-        for file in "${splitted_output_files[@]}"; do
+        OLD_IFS=$IFS
+        IFS=$'\n'
+        echo "${{ env.output_files }}" | while read file
+        do
           echo $file
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"

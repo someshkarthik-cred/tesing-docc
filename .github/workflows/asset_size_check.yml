@@ -34,7 +34,7 @@ jobs:
         
         if [ $has_exceeded_limit -eq 1 ]; then
         echo $file_list
-        echo files=$(echo -e "| File | Size | Status |\n| --- | --- | --- |\n$file_list") >> $GITHUB_OUTPUT
+        echo -e files=$(echo -e "| File | Size | Status |\n| --- | --- | --- |\n$file_list") >> $GITHUB_OUTPUT
         exit 1;
         else
         exit 0;

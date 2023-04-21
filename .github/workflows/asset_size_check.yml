@@ -46,7 +46,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const message = `### File Size Report\n\n${table}`;
+          const message = `### File Size Report\n\n${{ env.table_output }}`;
           github.issues.createComment({
             issue_number: context.issue.number,
             owner: context.repo.owner,

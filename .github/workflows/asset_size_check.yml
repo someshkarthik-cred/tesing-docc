@@ -34,24 +34,13 @@ jobs:
         
         if [ $has_exceeded_limit -eq 1 ]; then
         echo -e $file_list
-        echo -e files=$(echo -e "| File | Size | Status |\n| --- | --- | --- |\n$file_list") >> $GITHUB_OUTPUT
+        echo files=$(echo -e "| File | Size | Status |\n| --- | --- | --- |\n$file_list") >> $GITHUB_OUTPUT
         exit 1;
         else
         exit 0;
         fi
-    - name: Comment on pull request
-      if: ${{ failure() }}
-      uses: actions/github-script@v4
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create comment
+      uses: peter-evans/create-or-update-comment@v1
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const result = `#### Check File Size\n\n${{ steps.bulky_files.outputs.files }}`;
-          const payload = {
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: context.issue.number,
-            body: result
-          };
-          return github.issues.createComment(payload);
+        body: ${{ steps.check_file_size.outputs.files }}
+        issue-number: ${{ github.event.pull_request.number }}

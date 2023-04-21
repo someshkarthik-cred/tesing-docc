@@ -33,7 +33,7 @@ jobs:
         done
         
         if [ $has_exceeded_limit -eq 1 ]; then
-        echo "::set-output name=table_output::$(echo -e \"| File | Size | Status |\n| --- | --- | --- |\n$file_list\")"
+        echo "::set-output name=table_output::$(echo -e "| File | Size | Status |\n| --- | --- | --- |\n$file_list")"
         exit 1;
         else
         exit 0;

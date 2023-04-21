@@ -34,10 +34,8 @@ jobs:
         echo "File | Size (KB) | Link | Status" > file_table.md
         echo "--- | --- | --- | ---" >> file_table.md
         has_exceeded_limit=false
-        OLD_IFS=$IFS
         IFS=$'\n'
-        echo "${{ env.output_files }}" | while read file
-        do
+        for file in "${{ env.output_files }}"; do
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           encoded_url=$(urlencode "$file_link")
@@ -47,9 +45,10 @@ jobs:
             echo "$has_exceeded_limit"
           else
             echo "$file | $file_size | $encoded_url | PASSED ✅" >> file_table.md
+            echo "$has_exceeded_limit"
           fi
         done
-        IFS=$OLD_IFS
+        unset IFS
         echo "$has_exceeded_limit"
         echo "testing"
         if [ "$has_exceeded_limit" = true ]; then

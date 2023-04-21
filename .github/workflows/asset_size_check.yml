@@ -61,7 +61,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           const fs = require('fs');
-          const contents = fs.readFileSync('example.txt', 'utf8');
+          const contents = fs.readFileSync('file_table.md', 'utf8');
           const message = `### File Size Report\n\n${contents}`;
           github.issues.createComment({
             issue_number: context.issue.number,

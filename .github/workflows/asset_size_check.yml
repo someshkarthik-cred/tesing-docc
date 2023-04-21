@@ -49,9 +49,9 @@ jobs:
             echo "$file | $file_size | $encoded_url | PASSED ✅" >> file_table.md
           fi
         done
+        IFS=$OLD_IFS
         echo "$has_exceeded_limit"
         echo "testing"
-        #echo "$(cat file_table.md)"
         if [ "$has_exceeded_limit" = true ]; then
           #table_output=$(cat file_table.md)
           #echo "$table_output"

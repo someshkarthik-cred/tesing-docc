@@ -46,7 +46,6 @@ jobs:
             echo "$has_exceeded_limit"
           else
             echo "$file | $file_size | $encoded_url | PASSED ✅" >> file_table.md
-            echo "$has_exceeded_limit"
           fi
         done
         unset IFS

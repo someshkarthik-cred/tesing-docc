@@ -33,7 +33,7 @@ jobs:
         }
         echo "File | Size (KB) | Link | Status" > file_table.md
         echo "--- | --- | --- | ---" >> file_table.md
-        has_exceeded_limit=0
+        has_exceeded_limit=false
         OLD_IFS=$IFS
         IFS=$'\n'
         echo "${{ env.output_files }}" | while read file
@@ -43,13 +43,13 @@ jobs:
           encoded_url=$(urlencode "$file_link")
           if [ "$file_size" -gt 100 ]; then
             echo "$file | $file_size | $encoded_url | FAILED ❌" >> file_table.md
-            has_exceeded_limit=1
+            has_exceeded_limit=true
           else
             echo "$file | $file_size | $encoded_url | PASSED ✅" >> file_table.md
           fi
         done
         #echo "$(cat file_table.md)"
-        if [ $has_exceeded_limit -eq 1 ]; then
+        if [ "$has_exceeded_limit" = true ]; then
           #table_output=$(cat file_table.md)
           #echo "$table_output"
           #echo "table_output<<EOF" >> $GITHUB_ENV

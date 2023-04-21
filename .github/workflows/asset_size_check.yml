@@ -48,7 +48,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           const table = '${{ env.table }}'
-          const { owner, repo, number } = github.context.issue
+          const { owner, repo, number } = context.issue
           const octokit = new github.GitHub(process.env.GITHUB_TOKEN)
           await octokit.issues.createComment({
             owner,

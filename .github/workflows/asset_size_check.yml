@@ -37,7 +37,6 @@ jobs:
         IFS=$'\n'
         echo "${{ env.output_files }}" | while read file
         do
-          echo "file path $file shit the file oh fuck please trigger"
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           encoded_url=$(urlencode "$file_link")

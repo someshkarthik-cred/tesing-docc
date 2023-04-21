@@ -23,17 +23,15 @@ jobs:
         for file in ${{ steps.list_changed_files.outputs.output_files }}; do
           file_size=$(du -k "$file" | cut -f1)
           if [ "$file_size" -gt 100 ]; then
-            file_list+="$file_list| $file | ${file_size}KB | Failed |"
-            file_list+="\n"
+            file_list="$file_list| $file | ${file_size}KB | Failed |\n"
             has_exceeded_limit=1
           else
-            file_list+="$file_list| $file | ${file_size}KB | Passed |"
-            file_list+="\n"
+            file_list="$file_list| $file | ${file_size}KB | Passed |\n"
           fi
         done
         
         if [ $has_exceeded_limit -eq 1 ]; then
-        echo "::set-output name=table_output::$(printf "| File | Size | Status |\n| --- | --- | --- |\n%b" "$file_list")"
+        echo table_output=$(echo -e "| File | Size | Status |\n| --- | --- | --- |\n$file_list") >> $GITHUB_ENV
         #exit 1;
         else
         exit 0;
@@ -41,9 +39,5 @@ jobs:
     - name: Create comment
       uses: peter-evans/create-or-update-comment@v3
       with:
-        body: |
-          | First Header  | Second Header |
-          | ------------- | ------------- |
-          | Content Cell  | Content Cell  |
-          | Content Cell  | Content Cell  |
+        body: ${{ steps.bulky_files.outputs.table_output }}
         issue-number: ${{ github.event.pull_request.number }}

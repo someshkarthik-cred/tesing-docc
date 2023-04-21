@@ -23,10 +23,12 @@ jobs:
         for file in ${{ steps.list_changed_files.outputs.output_files }}; do
           file_size=$(du -k "$file" | cut -f1)
           if [ "$file_size" -gt 100 ]; then
-            file_list+="$file_list| $file | ${file_size}KB | Failed |\n"
+            file_list+="$file_list| $file | ${file_size}KB | Failed |"
+            file_list+="\n"
             has_exceeded_limit=1
           else
-            file_list+="$file_list| $file | ${file_size}KB | Passed |\n"
+            file_list+="$file_list| $file | ${file_size}KB | Passed |"
+            file_list+="\n"
           fi
         done
         

@@ -14,14 +14,18 @@ jobs:
     - name: List changed files
       id: list_changed_files
       run: |
-        echo output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp3' '*.wav' '*.lottie') >> $GITHUB_OUTPUT
+        output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp3' '*.wav' '*.lottie')
+        echo "output_files<<EOF" >> $GITHUB_ENV
+        echo "$output_files" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
     - name: Check file size
       id: bulky_files
       run: |
         echo "File | Size (KB) | Link | Status" > file_table.md
         echo "--- | --- | --- | ---" >> file_table.md
         has_exceeded_limit=0
-        for file in ${{ steps.list_changed_files.outputs.output_files }}; do
+        IFS='\n' read -ra splitted_output_files <<< ${{ env.output_files }}
+        for file in ${splitted_output_files[@]}; do
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           if [ "$file_size" -gt 100 ]; then

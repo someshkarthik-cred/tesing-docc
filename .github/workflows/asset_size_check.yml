@@ -35,7 +35,7 @@ jobs:
         echo "--- | --- | --- | ---" >> file_table.md
         has_exceeded_limit=false
         IFS=$'\n'
-        for file in ${{ env.output_files }}; do
+        for file in "${{ env.output_files }}"; do
           echo "file path $file"
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"

@@ -27,6 +27,10 @@ jobs:
     - name: Check file size
       id: bulky_files
       run: |
+        urlencode() {
+          # Use awk to URL encode the input string
+          echo -n "$1" | awk '{gsub(/[^a-zA-Z0-9_\-\.!~\*'\''\(\)]/, "%25" sprintf("%02X", substr($0,1,1))); print}'
+        }
         echo "File | Size (KB) | Link | Status" > file_table.md
         echo "--- | --- | --- | ---" >> file_table.md
         has_exceeded_limit=0
@@ -36,12 +40,13 @@ jobs:
         do
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
+          encoded_url=$(urlencode "$file_link")
           if [ "$file_size" -gt 100 ]; then
-            echo "$file | $file_size | $file_link | FAILED ❌" >> file_table.md
+            echo "$file | $file_size | $encoded_url | FAILED ❌" >> file_table.md
             has_exceeded_limit=1
             echo "exceeded"
           else
-            echo "$file | $file_size | $file_link | PASSED ✅" >> file_table.md
+            echo "$file | $file_size | $encoded_url | PASSED ✅" >> file_table.md
           fi
         done
         echo "$(cat file_table.md)"

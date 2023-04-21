@@ -25,7 +25,7 @@ jobs:
         echo "--- | --- | --- | ---" >> file_table.md
         has_exceeded_limit=0
         IFS='\n' read -ra splitted_output_files <<< ${{ env.output_files }}
-        for file in ${splitted_output_files[@]}; do
+        for file in "${splitted_output_files[@]}"; do
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           if [ "$file_size" -gt 100 ]; then

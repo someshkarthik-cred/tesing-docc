@@ -29,7 +29,7 @@ jobs:
       run: |
         urlencode() {
           # Use awk to URL encode the input string
-          echo -n "$1" | awk '{gsub(/ /, "%20"); gsub(/[^a-zA-Z0-9_\-\.!~\*'\''\(\) ]/, "%25" sprintf("%02X", substr($0,1,1))); print}'
+          echo "$1" | sed 's/ /%20/g'
         }
         echo "File | Size (KB) | Link | Status" > file_table.md
         echo "--- | --- | --- | ---" >> file_table.md

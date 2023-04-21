@@ -37,7 +37,7 @@ jobs:
         exit 0;
         fi
     - name: Create comment
-      uses: peter-evans/create-or-update-comment@v1
+      uses: peter-evans/create-or-update-comment@v3
       with:
-        body: ${{ steps.check_file_size.outputs.table_output }}
+        body: ${{ steps.bulky_files.outputs.table_output }}
         issue-number: ${{ github.event.pull_request.number }}

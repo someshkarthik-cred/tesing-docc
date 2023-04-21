@@ -1,7 +1,7 @@
 name: Check File Size
 on:
   pull_request:
-    types: [opened, edited, reopened, synchronize]
+    branches: ["main"]
 
 jobs:
   check_file_size:

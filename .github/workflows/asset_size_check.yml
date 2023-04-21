@@ -37,7 +37,7 @@ jobs:
             echo "$file | $file_size | $file_link | PASSED ✅" >> file_table.md
           fi
         done
-        
+        echo "entered here"
         if [ $has_exceeded_limit -eq 1 ]; then
         table_output=$(cat file_table.md)
         echo $table_output

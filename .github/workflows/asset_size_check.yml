@@ -45,7 +45,7 @@ jobs:
         echo "table_output<<EOF" >> $GITHUB_ENV
         echo "$table_output" >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
-        echo check_status=1 >> $GITHUB_OUTPUT
+        #echo check_status=1 >> $GITHUB_OUTPUT
         else
         exit 0;
         fi

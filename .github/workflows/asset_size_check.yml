@@ -36,7 +36,7 @@ jobs:
         has_exceeded_limit=false
         IFS=$'\n'
         for file in "${{ env.output_files }}"; do
-          echo "file path $file"
+          echo "file path $file shit the file"
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           encoded_url=$(urlencode "$file_link")

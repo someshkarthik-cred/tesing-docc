@@ -38,6 +38,7 @@ jobs:
         while read -r file; do
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
+          echo "[Diff](https://github.com/${{ github.repository }}/pull/${{ github.event.number }}/files#diff-${file}-R${{ github.base_ref }})"
           encoded_url=$(urlencode "$file_link")
           if [ "$file_size" -gt 100 ]; then
             export has_exceeded_limit=true
@@ -49,9 +50,6 @@ jobs:
         unset IFS
         if [ "$has_exceeded_limit" = true ]; then
           echo check_status=1 >> $GITHUB_OUTPUT
-        else
-          echo "something is wrong"
-          exit 0;
         fi
     - name: Comment on PR
       uses: actions/github-script@v4

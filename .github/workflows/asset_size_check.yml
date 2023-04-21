@@ -58,7 +58,7 @@ jobs:
           echo "We have encoutered few asset size above thresshold. please compress them"
           echo -e "::error::$(cat file_table.md)"
           exit 1;
-          #echo check_status=1 >> $GITHUB_OUTPUT
+          echo check_status=1 >> $GITHUB_OUTPUT
         else
           exit 0;
         fi

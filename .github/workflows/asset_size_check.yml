@@ -35,13 +35,14 @@ jobs:
         echo "--- | --- | --- | ---" >> file_table.md
         has_exceeded_limit=false
         IFS=$'\n'
-        for file in "${{ env.output_files }}"; do
+        echo "${{ env.output_files }}" | while read file
+        do
           echo "file path $file shit the file oh fuck please trigger"
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           encoded_url=$(urlencode "$file_link")
           if [ "$file_size" -gt 100 ]; then
-            has_exceeded_limit=true
+            declare -g has_exceeded_limit=true
             echo "$file | $file_size | $encoded_url | FAILED ❌" >> file_table.md
             echo "$has_exceeded_limit"
           else

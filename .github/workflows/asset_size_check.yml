@@ -77,7 +77,11 @@ jobs:
             repo: context.repo.repo,
             body: message
           });
-    
+    - name: check file size status
+      run: |
+        if [ ${{ steps.bulky_files.outputs.check_status }} -eq 1 ]; then
+        exit 1;
+        fi
     
     
     

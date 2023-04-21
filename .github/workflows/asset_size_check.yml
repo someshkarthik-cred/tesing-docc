@@ -41,5 +41,9 @@ jobs:
     - name: Create comment
       uses: peter-evans/create-or-update-comment@v3
       with:
-        body: ${{ steps.bulky_files.outputs.table_output }}
+        body: |
+          | First Header  | Second Header |
+          | ------------- | ------------- |
+          | Content Cell  | Content Cell  |
+          | Content Cell  | Content Cell  |
         issue-number: ${{ github.event.pull_request.number }}

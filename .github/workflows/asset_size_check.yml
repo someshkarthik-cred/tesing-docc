@@ -42,22 +42,12 @@ jobs:
           if [ "$file_size" -gt 100 ]; then
             export has_exceeded_limit=true
             echo "$file | $file_size | $encoded_url | FAILED ❌" >> file_table.md
-            echo "$has_exceeded_limit"
           else
             echo "$file | $file_size | $encoded_url | PASSED ✅" >> file_table.md
           fi
         done <<< "${{ env.output_files }}"
         unset IFS
-        echo "$has_exceeded_limit"
-        echo "testing"
         if [ "$has_exceeded_limit" = true ]; then
-          #table_output=$(cat file_table.md)
-          #echo "$table_output"
-          #echo "table_output<<EOF" >> $GITHUB_ENV
-          #echo "$table_output" >> $GITHUB_ENV
-          #echo "EOF" >> $GITHUB_ENV
-          echo "We have encoutered few asset size above thresshold. please compress them"
-          echo -e "::error::$(cat file_table.md)"
           echo check_status=1 >> $GITHUB_OUTPUT
         else
           echo "something is wrong"
@@ -81,6 +71,8 @@ jobs:
     - name: check file size status
       run: |
         if [ ${{ steps.bulky_files.outputs.check_status }} -eq 1 ]; then
+        echo "### 🚨 We have encoutered few asset size above thresshold. please compress them 🚨 ###"
+        echo -e "::error::$(cat file_table.md)"
         exit 1;
         fi
     

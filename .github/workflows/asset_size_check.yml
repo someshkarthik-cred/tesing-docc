@@ -42,9 +42,9 @@ jobs:
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           encoded_url=$(urlencode "$file_link")
           if [ "$file_size" -gt 100 ]; then
+            has_exceeded_limit=true
             echo "$file | $file_size | $encoded_url | FAILED ❌" >> file_table.md
             echo "exceeded"
-            has_exceeded_limit=true
           else
             echo "$file | $file_size | $encoded_url | PASSED ✅" >> file_table.md
           fi

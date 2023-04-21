@@ -31,7 +31,10 @@ jobs:
         done
         
         if [ $has_exceeded_limit -eq 1 ]; then
-        echo -e table_output=$(echo -e "| File | Size | Status |\n| --- | --- | --- |\n$file_list") >> $GITHUB_OUTPUT
+        table_output=$(echo -e "| File | Size | Status |\n| --- | --- | --- |\n$file_list")
+        echo "table_output<<EOF" >> $GITHUB_ENV
+        echo "$table_output" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
         echo check_status=1 >> $GITHUB_OUTPUT
         else
         exit 0;
@@ -39,7 +42,7 @@ jobs:
     - name: Create comment
       uses: peter-evans/create-or-update-comment@v3
       with:
-        body: ${{ steps.bulky_files.outputs.table_output }}
+        body: ${{ env.table_output }}
         issue-number: ${{ github.event.pull_request.number }}
     - name: check file size status
       run: |

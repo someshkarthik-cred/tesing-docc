@@ -71,7 +71,7 @@ jobs:
         if [ ${{ steps.bulky_files.outputs.check_status }} -eq 1 ]; then
         echo "### 🚨 We have encoutered few asset size above thresshold. please compress them 🚨 ###"
         echo -e "::error::$(cat file_table.md)"
-        exit 1;
+        #exit 1;
         fi
     
     

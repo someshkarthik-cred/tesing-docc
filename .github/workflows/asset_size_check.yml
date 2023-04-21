@@ -33,6 +33,7 @@ jobs:
           if [ "$file_size" -gt 100 ]; then
             echo "$file | $file_size | $file_link | FAILED ❌" >> file_table.md
             has_exceeded_limit=1
+            echo "exceeded"
           else
             echo "$file | $file_size | $file_link | PASSED ✅" >> file_table.md
           fi

@@ -50,6 +50,7 @@ jobs:
           fi
         done
         echo "$has_exceeded_limit"
+        echo "testing"
         #echo "$(cat file_table.md)"
         if [ "$has_exceeded_limit" = true ]; then
           #table_output=$(cat file_table.md)

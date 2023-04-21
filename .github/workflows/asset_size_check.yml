@@ -60,6 +60,7 @@ jobs:
           exit 1;
           echo check_status=1 >> $GITHUB_OUTPUT
         else
+          echo "something is wrong"
           exit 0;
         fi
     - name: Comment on PR

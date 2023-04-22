@@ -59,8 +59,8 @@ jobs:
         done <<< "${{ env.output_files }}"
         unset IFS
         
+        echo "<!-- End of table -->" >> file_table.md
         echo "Supported File formats \`.m4a\`, \`.mp3\`, \`.json\`" >> file_table.md
-        
         echo "\n" >> file_table.md
         
         size_table="
@@ -70,6 +70,7 @@ jobs:
           \`.json\` | 200KB
         "
         echo "$size_table" >> file_table.md
+        echo "<!-- End of table -->" >> file_table.md
         
         if [ "$has_encountered_error" = true ]; then
           echo check_status=1 >> $GITHUB_OUTPUT

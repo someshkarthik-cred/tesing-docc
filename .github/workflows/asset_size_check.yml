@@ -5,7 +5,7 @@ on:
 
 jobs:
   check_file_size:
-    runs-on: macOS-latest
+    runs-on: self-hosted
     steps:
     - name: Checkout code
       uses: actions/checkout@v3

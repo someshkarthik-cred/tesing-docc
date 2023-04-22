@@ -14,7 +14,7 @@ jobs:
     - name: List changed files
       id: list_changed_files
       run: |
-        output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp3' '*.wav' '*.lottie')
+        output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp4' '*.aiff' '*.mp3' '*.wav' '*.lottie')
         echo "output_files<<EOF" >> $GITHUB_ENV
         echo "$output_files" >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV

@@ -59,15 +59,15 @@ jobs:
         done <<< "${{ env.output_files }}"
         unset IFS
         
-        echo "Supported File formats `.m4a`, `.mp3`, `.json`" >> file_table.md
+        echo "Supported File formats `m4a`, `mp3`, `json`" >> file_table.md
         
         echo "\n" >> file_table.md
         
         size_table="
           Extension | Size Limit
           --- | ---
-          `.m4a`, `.mp3` | 100KB
-          `.json` | 200KB
+          `m4a`, `mp3` | 100KB
+          `json` | 200KB
         "
         echo "$size_table" >> file_table.md
         

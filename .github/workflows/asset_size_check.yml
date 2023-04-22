@@ -44,7 +44,7 @@ jobs:
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           encoded_url=$(urlencode "$file_link")
-          extension=$(file_extension, $file_link)
+          extension=$(file_extension $file_link)
           if [[ "$file" =~ \.(wav|mp4|aiff)$ ]]; then
             export has_encountered_error=true
             echo "$file | $file_size | $extension | $encoded_url | UNSUPPORTED_FILE_FORMAT ❌" >> file_table.md

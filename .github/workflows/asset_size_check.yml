@@ -27,22 +27,27 @@ jobs:
         }
         echo "File | Size (KB) | Link | Status" > file_table.md
         echo "--- | --- | --- | ---" >> file_table.md
-        has_exceeded_limit=false
+        has_encountered_error=false
         IFS=$'\n'
         while read -r file; do
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
-          echo "[${file}](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/${file}#diff-${file}-R${{ github.base_ref }})"
           encoded_url=$(urlencode "$file_link")
-          if [ "$file_size" -gt 100 ]; then
-            export has_exceeded_limit=true
-            echo "$file | $file_size | $encoded_url | FAILED ❌" >> file_table.md
+          if [[ "$file" =~ \.(wav|mp4|aiff)$ ]]; then
+            export has_encountered_error=true
+            echo "$file | $file_size | $encoded_url | UNSUPPORTED_FILE_FORMAT ❌" >> file_table.md
+            exit 1
           else
-            echo "$file | $file_size | $encoded_url | PASSED ✅" >> file_table.md
+            if [ "$file_size" -gt 100 ]; then
+              export has_encountered_error=true
+              echo "$file | $file_size | $encoded_url | FAILED ❌" >> file_table.md
+            else
+              echo "$file | $file_size | $encoded_url | PASSED ✅" >> file_table.md
+            fi
           fi
         done <<< "${{ env.output_files }}"
         unset IFS
-        if [ "$has_exceeded_limit" = true ]; then
+        if [ "$has_encountered_error" = true ]; then
           echo check_status=1 >> $GITHUB_OUTPUT
         fi
     - name: Comment on PR

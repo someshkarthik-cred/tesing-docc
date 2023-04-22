@@ -60,9 +60,7 @@ jobs:
         unset IFS
         
         echo "<!-- End of table -->" >> file_table.md
-        echo "Supported File formats \`.m4a\`, \`.mp3\`, \`.json\`" >> file_table.md
-        echo "\n" >> file_table.md
-        
+        echo "Supported File formats \`.m4a\`, \`.mp3\`, \`.json\`" >> file_table.md        
         size_table="
           Extension | Size Limit
           --- | ---

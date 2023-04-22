@@ -14,7 +14,7 @@ jobs:
     - name: List changed files
       id: list_changed_files
       run: |
-        output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp4' '*.aiff' '*.mp3' '*.wav' '*.lottie')
+        output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp4' '*.aiff' '*.mp3' '*.wav' '*.json')
         echo "output_files<<EOF" >> $GITHUB_ENV
         echo "$output_files" >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
@@ -58,6 +58,19 @@ jobs:
           fi
         done <<< "${{ env.output_files }}"
         unset IFS
+        
+        echo "Supported File formats `.m4a`, `.mp3`, `.json`" >> file_table.md
+        
+        echo "\n" >> file_table.md
+        
+        size_table="
+          Extension | Size Limit
+          --- | ---
+          `.m4a`, `.mp3` | 100KB
+          `.json` | 200KB
+        "
+        echo "$size_table" >> file_table.md
+        
         if [ "$has_encountered_error" = true ]; then
           echo check_status=1 >> $GITHUB_OUTPUT
         fi

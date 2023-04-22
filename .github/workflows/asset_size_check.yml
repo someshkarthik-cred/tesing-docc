@@ -25,23 +25,35 @@ jobs:
           # Use awk to URL encode the input string
           echo "$1" | sed 's/ /%20/g'
         }
-        echo "File | Size (KB) | Link | Status" > file_table.md
-        echo "--- | --- | --- | ---" >> file_table.md
+        
+        file_extension() {
+          # Get the base name of the URL (i.e. the file name)
+          basename=$(basename "$1")
+
+          # Use awk to extract the file extension
+          extension=$(echo "$basename" | awk -F . '{print $NF}')
+          
+          echo "$extension"
+        }
+        
+        echo "File | Size (KB) | extension | Link | Status" > file_table.md
+        echo "--- | --- | --- | --- | ---" >> file_table.md
         has_encountered_error=false
         IFS=$'\n'
         while read -r file; do
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           encoded_url=$(urlencode "$file_link")
+          extension=$(file_extension, $file_link)
           if [[ "$file" =~ \.(wav|mp4|aiff)$ ]]; then
             export has_encountered_error=true
-            echo "$file | $file_size | $encoded_url | UNSUPPORTED_FILE_FORMAT ❌" >> file_table.md
+            echo "$file | $file_size | $extension | $encoded_url | UNSUPPORTED_FILE_FORMAT ❌" >> file_table.md
           else
             if [ "$file_size" -gt 100 ]; then
               export has_encountered_error=true
-              echo "$file | $file_size | $encoded_url | FAILED ❌" >> file_table.md
+              echo "$file | $file_size | $extension | $encoded_url | FAILED ❌" >> file_table.md
             else
-              echo "$file | $file_size | $encoded_url | PASSED ✅" >> file_table.md
+              echo "$file | $file_size | $extension | $encoded_url | PASSED ✅" >> file_table.md
             fi
           fi
         done <<< "${{ env.output_files }}"

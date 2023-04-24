@@ -16,8 +16,7 @@ jobs:
         run: |
           COMMENTS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments" | jq -r '.[] | .id')
-          echo "::set-output name=comments::$COMMENTS"
-          for comment in "$COMMENTS"; do
+          for comment in $COMMENTS; do
             curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/issues/comments/${comment}"
           done

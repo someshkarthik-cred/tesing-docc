@@ -46,15 +46,20 @@ jobs:
           esac
         }
         
-        echo "File | Size (KB) | extension | Status" > file_table.md
-        echo "--- | --- | --- | ---" >> file_table.md
-        has_encountered_error=false
         filtered_asset_files="${{ env.output_files }}"
         
         if [ -z $filtered_asset_files ]; then
           echo "No asset files to process"
-          exit 0;
+          echo "There are not asset files found in this pr. ✅" >> file_table.md
+          echo skipped_size_check=true >> $GITHUB_OUTPUT
+          exit 0
+        else
+          echo skipped_file_check=false >> $GITHUB_OUTPUT
         fi
+        
+        echo "File | Size (KB) | extension | Status" > file_table.md
+        echo "--- | --- | --- | ---" >> file_table.md
+        has_encountered_error=false
         
         IFS=$'\n'
         while read -r file; do
@@ -99,12 +104,9 @@ jobs:
         echo "$size_table" >> file_table.md
         echo "<!-- End of table -->" >> file_table.md
         
-        if [ "$has_encountered_error" = true ]; then
-          echo check_status=1 >> $GITHUB_OUTPUT
-        fi
+        echo check_status="$has_encountered_error" >> $GITHUB_OUTPUT
     - name: Comment on PR
       uses: actions/github-script@v4
-      continue-on-error: true
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
@@ -139,11 +141,12 @@ jobs:
             }
           }
     - name: check file size status
+      if: ${{ !steps.bulky_files.outputs.skipped_size_check }}
       run: |
-        if [ ${{ steps.bulky_files.outputs.check_status }} -eq 1 ]; then
+        if [ ${{ steps.bulky_files.outputs.check_status }} = true ]; then
         echo "### 🚨 We have encoutered few asset size above thresshold. please compress them 🚨 ###"
         echo -e "::error::$(cat file_table.md)"
-        #exit 1;
+        exit 1;
         fi
     
     

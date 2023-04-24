@@ -33,18 +33,16 @@ jobs:
         }
         
         # These thresshold are defines in KB (Kilo Bytes)
-        readonly export AUDIO_FILES_THRESSHOLD=100
-        readonly export JSON_FILES_THRESSHOLD=250
+        global AUDIO_FILES_THRESSHOLD=100
+        global JSON_FILES_THRESSHOLD=250
         
         function size_limit {
           case $1 in
             m4a | mp3 )
-              local var=$AUDIO_FILES_THRESSHOLD
-              return $var
+              return $AUDIO_FILES_THRESSHOLD
               ;;
             json )
-              local var=$JSON_FILES_THRESSHOLD
-              return $var
+              return $JSON_FILES_THRESSHOLD
               ;;
             * )
               echo "🚨 Unknown format. please fix the script for any discrepency 🚨"

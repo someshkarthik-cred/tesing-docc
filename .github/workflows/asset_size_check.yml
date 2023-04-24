@@ -70,14 +70,24 @@ jobs:
           fi
         done <<< "${{ env.output_files }}"
         unset IFS
-        
         echo "<!-- End of table -->" >> file_table.md
-        echo "Supported File formats \`.m4a\`, \`.mp3\`, \`.json\`" >> file_table.md        
+        
+        echo "### Supported File Formats"
+        file_format_table="
+        File type | Extensions
+        --- | ---
+        Audio | \`.mp4\` , \`.m4a\`
+        Lottie | \`.json\`
+        "
+        echo "$file_format_table" >> file_table.md
+        echo "<!-- End of table -->" >> file_table.md
+        
+        echo "### Size Thresshold"
         size_table="
-          Extension | Size Limit
+          Extension | Thresshold
           --- | ---
           \`.m4a\`, \`mp3\` | 100KB
-          \`.json\` | 200KB
+          \`.json\` | 250KB
         "
         echo "$size_table" >> file_table.md
         echo "<!-- End of table -->" >> file_table.md

@@ -32,13 +32,17 @@ jobs:
           echo "$extension"
         }
         
+        # These thresshold are defines in KB (Kilo Bytes)
+        declare -r AUDIO_FILES_THRESSHOLD=100
+        declare -r JSON_FILES_THRESSHOLD=250
+        
         size_limit() {
           case $1 in
             m4a | mp3 )
-              echo 100
+              echo global $AUDIO_FILES_THRESSHOLD
               ;;
             json )
-              echo 250
+              echo global $JSON_FILES_THRESSHOLD
               ;;
             * )
               echo "🚨 Unknown format. please fix the script for any discrepency 🚨"
@@ -103,8 +107,8 @@ jobs:
         size_table="
           Extension | Thresshold
           --- | ---
-          \`${SUPPORTED_EXTENSIONS[$M4A]}\`, \`${SUPPORTED_EXTENSIONS[$MP3]}\` | 100KB
-          \`${SUPPORTED_EXTENSIONS[$JSON]}\` | 250KB
+          \`${SUPPORTED_EXTENSIONS[$M4A]}\`, \`${SUPPORTED_EXTENSIONS[$MP3]}\` | $AUDIO_FILES_THRESSHOLD KB
+          \`${SUPPORTED_EXTENSIONS[$JSON]}\` | $JSON_FILES_THRESSHOLD KB
         "
         echo "$size_table" >> file_table.md
         echo "<!-- End of table -->" >> file_table.md

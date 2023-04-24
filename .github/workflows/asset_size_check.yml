@@ -72,7 +72,7 @@ jobs:
           file_link="[$file](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           encoded_url=$(urlencode $file_link)
           extension=$(file_extension $file)
-          if [[ grep -qw "$extension" <<<"${SUPPORTED_EXTENSIONS[*]}" ]]; then
+          if grep -qw "$extension" <<<"${SUPPORTED_EXTENSIONS[*]}"; then
             expected_size_limit=$(size_limit $extension)
             echo "Size limit received from fuction $expected_size_limit"
             if [ "$file_size" -gt $expected_size_limit ]; then

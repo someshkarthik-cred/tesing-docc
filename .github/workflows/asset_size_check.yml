@@ -61,16 +61,18 @@ jobs:
         echo "--- | --- | --- | ---" >> file_table.md
         has_encountered_error=false
         
+        declare -a SUPPORTED_EXTENSIONS=("m4a" "mp3" "json")
+        declare -r M4A=0
+        decalre -r MP3=1
+        decalre -r JSON=2
+        
         IFS=$'\n'
         while read -r file; do
           file_size=$(du -k "$file" | cut -f1)
           file_link="[$file](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           encoded_url=$(urlencode $file_link)
           extension=$(file_extension $file)
-          if [[ "$file" =~ \.(wav|mp4|aiff)$ ]]; then
-            export has_encountered_error=true
-            echo "$encoded_url | $file_size | $extension | UNSUPPORTED_FILE_FORMAT ❌" >> file_table.md
-          else
+          if [[ grep -qw "$extension" <<<"${SUPPORTED_EXTENSIONS[*]}" ]]; then
             expected_size_limit=$(size_limit $extension)
             echo "Size limit received from fuction $expected_size_limit"
             if [ "$file_size" -gt $expected_size_limit ]; then
@@ -79,6 +81,9 @@ jobs:
             else
               echo "$encoded_url | $file_size | $extension | PASSED ✅" >> file_table.md
             fi
+          else
+            export has_encountered_error=true
+            echo "$encoded_url | $file_size | $extension | UNSUPPORTED_FILE_FORMAT ❌" >> file_table.md
           fi
         done <<< "$filtered_asset_files"
         unset IFS

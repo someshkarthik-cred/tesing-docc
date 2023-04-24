@@ -27,12 +27,8 @@ jobs:
         }
         
         file_extension() {
-          # Get the base name of the URL (i.e. the file name)
-          basename=$(basename "$1")
-
           # Use awk to extract the file extension
-          extension=$(echo "$basename" | awk -F . '{print $NF}')
-          
+          extension=`expr "$1" : '.*\.\(.*\)'`
           echo "$extension"
         }
         

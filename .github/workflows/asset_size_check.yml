@@ -113,26 +113,30 @@ jobs:
             owner: context.repo.owner,
             repo: context.repo.repo,
           });
-          console.log("${comments}")
+          console.log(comments)
           const comment = comments.find(c => c.user.login === 'github-actions[bot]' && c.body.includes('Asset File Size Report'));
-          console.log('The filtered comment is ${comment}')
+          console.log(`The filtered comment is ${comment}`)
           const fs = require('fs');
           const contents = fs.readFileSync('file_table.md', 'utf8');
-          const message = `### Asset File Size Report\n\n${contents}`;
-          if (comment) {
-            github.issues.updateComment({
-              comment_id: comment.id,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: message,
-            });
+          if (!contents) {
+            process.exit(0)
           } else {
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: message
-            });
+            const message = `### Asset File Size Report\n\n${contents}`;
+            if (comment) {
+              github.issues.updateComment({
+                comment_id: comment.id,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: message,
+              });
+            } else {
+              github.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: message
+              });
+            }
           }
     - name: check file size status
       run: |

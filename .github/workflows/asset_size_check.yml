@@ -48,7 +48,7 @@ jobs:
         
         filtered_asset_files="${{ env.output_files }}"
         
-        if [ -z $filtered_asset_files ]; then
+        if [ -z "$filtered_asset_files" ]; then
           echo "No asset files to process"
           echo "There are not asset files found in this pr. ✅" >> file_table.md
           echo skipped_size_check=true >> $GITHUB_OUTPUT

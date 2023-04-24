@@ -49,6 +49,13 @@ jobs:
         echo "File | Size (KB) | extension | Status" > file_table.md
         echo "--- | --- | --- | ---" >> file_table.md
         has_encountered_error=false
+        filtered_asset_files=${{ env.output_files }}
+        
+        if [ -z $filtered_asset_files ]; then
+          echo "No asset files to process"
+          exit 0;
+        fi
+        
         IFS=$'\n'
         while read -r file; do
           file_size=$(du -k "$file" | cut -f1)
@@ -68,11 +75,11 @@ jobs:
               echo "$encoded_url | $file_size | $extension | PASSED ✅" >> file_table.md
             fi
           fi
-        done <<< "${{ env.output_files }}"
+        done <<< "$filtered_asset_files"
         unset IFS
         echo "<!-- End of table -->" >> file_table.md
         
-        echo "### Supported File Formats"
+        echo "### Supported File Formats" >> file_table.md
         file_format_table="
         File type | Extensions
         --- | ---
@@ -82,7 +89,7 @@ jobs:
         echo "$file_format_table" >> file_table.md
         echo "<!-- End of table -->" >> file_table.md
         
-        echo "### Size Thresshold"
+        echo "### Size Thresshold" >> file_table.md
         size_table="
           Extension | Thresshold
           --- | ---
@@ -103,7 +110,7 @@ jobs:
         script: |
           const fs = require('fs');
           const contents = fs.readFileSync('file_table.md', 'utf8');
-          const message = `### File Size Report\n\n${contents}`;
+          const message = `### Asset File Size Report\n\n${contents}`;
           github.issues.createComment({
             issue_number: context.issue.number,
             owner: context.repo.owner,

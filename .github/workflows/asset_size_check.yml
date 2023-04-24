@@ -43,7 +43,7 @@ jobs:
               return $var
               ;;
             json )
-              loval var=$JSON_FILES_THRESSHOLD
+              local var=$JSON_FILES_THRESSHOLD
               return $var
               ;;
             * )

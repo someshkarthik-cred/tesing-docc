@@ -33,8 +33,8 @@ jobs:
         }
         
         # These thresshold are defines in KB (Kilo Bytes)
-        export declare -ri AUDIO_FILES_THRESSHOLD=100
-        export declare -ri JSON_FILES_THRESSHOLD=250
+        readonly export AUDIO_FILES_THRESSHOLD=100
+        readonly export JSON_FILES_THRESSHOLD=250
         
         function size_limit {
           case $1 in

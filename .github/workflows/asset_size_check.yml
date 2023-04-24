@@ -49,7 +49,7 @@ jobs:
         echo "File | Size (KB) | extension | Status" > file_table.md
         echo "--- | --- | --- | ---" >> file_table.md
         has_encountered_error=false
-        filtered_asset_files=${{ env.output_files }}
+        filtered_asset_files="${{ env.output_files }}"
         
         if [ -z $filtered_asset_files ]; then
           echo "No asset files to process"
@@ -108,15 +108,30 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const fs = require('fs');
-          const contents = fs.readFileSync('file_table.md', 'utf8');
-          const message = `### Asset File Size Report\n\n${contents}`;
-          github.issues.createComment({
+          const { data: comments } = await github.issues.listComments({
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            body: message
           });
+          const comment = comments.find(c => c.user.login === 'github-actions[bot]' && c.body.startsWith('### Asset File Size Report'));
+          const fs = require('fs');
+          const contents = fs.readFileSync('file_table.md', 'utf8');
+          const message = `### Asset File Size Report\n\n${contents}`;
+          if (comment) {
+            github.issues.updateComment({
+              comment_id: comment.id,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message,
+            });
+          } else {
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            });
+          }
     - name: check file size status
       run: |
         if [ ${{ steps.bulky_files.outputs.check_status }} -eq 1 ]; then

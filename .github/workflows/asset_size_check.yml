@@ -39,10 +39,12 @@ jobs:
         function size_limit {
           case $1 in
             m4a | mp3 )
-              return $(export $AUDIO_FILES_THRESSHOLD)
+              declare -g AUDIO_FILES_THRESSHOLD
+              return $AUDIO_FILES_THRESSHOLD
               ;;
             json )
-              return $(export $JSON_FILES_THRESSHOLD)
+              declare -g JSON_FILES_THRESSHOLD
+              return $JSON_FILES_THRESSHOLD
               ;;
             * )
               echo "🚨 Unknown format. please fix the script for any discrepency 🚨"

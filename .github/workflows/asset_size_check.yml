@@ -29,7 +29,21 @@ jobs:
         file_extension() {
           # Use awk to extract the file extension
           extension=`expr "$1" : '.*\.\(.*\)'`
+          echo "file format we got $extension"
           echo "$extension"
+        }
+        
+        size_limit() {
+          case $1 in
+            m4a | mp3 )
+              echo 100
+              ;;
+            json )
+              echo 250
+            * )
+              echo "🚨 Unknown format. please fix the script for any discrepency 🚨"
+              exit 1
+          esac
         }
         
         echo "File | Size (KB) | extension | Link | Status" > file_table.md

@@ -33,17 +33,15 @@ jobs:
         }
         
         # These thresshold are defines in KB (Kilo Bytes)
-        declare -ri AUDIO_FILES_THRESSHOLD=100
-        declare -ri JSON_FILES_THRESSHOLD=250
+        export declare -ri AUDIO_FILES_THRESSHOLD=100
+        export declare -ri JSON_FILES_THRESSHOLD=250
         
         function size_limit {
           case $1 in
             m4a | mp3 )
-              declare -g AUDIO_FILES_THRESSHOLD
               return $AUDIO_FILES_THRESSHOLD
               ;;
             json )
-              declare -g JSON_FILES_THRESSHOLD
               return $JSON_FILES_THRESSHOLD
               ;;
             * )

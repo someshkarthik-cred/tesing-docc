@@ -36,13 +36,13 @@ jobs:
         declare -r AUDIO_FILES_THRESSHOLD=100
         declare -r JSON_FILES_THRESSHOLD=250
         
-        size_limit() {
+        function size_limit {
           case $1 in
             m4a | mp3 )
-              echo global $AUDIO_FILES_THRESSHOLD
+              return global $AUDIO_FILES_THRESSHOLD
               ;;
             json )
-              echo global $JSON_FILES_THRESSHOLD
+              return global $JSON_FILES_THRESSHOLD
               ;;
             * )
               echo "🚨 Unknown format. please fix the script for any discrepency 🚨"
@@ -77,7 +77,8 @@ jobs:
           encoded_url=$(urlencode $file_link)
           extension=$(file_extension $file)
           if grep -qw "$extension" <<<"${SUPPORTED_EXTENSIONS[*]}"; then
-            expected_size_limit=$(size_limit $extension)
+            size_limit $extension
+            expected_size_limit=$?
             echo "Size limit received from fuction $expected_size_limit"
             if [ "$file_size" -gt $expected_size_limit ]; then
               export has_encountered_error=true

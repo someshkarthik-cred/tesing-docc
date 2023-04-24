@@ -63,8 +63,8 @@ jobs:
         
         declare -a SUPPORTED_EXTENSIONS=("m4a" "mp3" "json")
         declare -r M4A=0
-        decalre -r MP3=1
-        decalre -r JSON=2
+        declare -r MP3=1
+        declare -r JSON=2
         
         IFS=$'\n'
         while read -r file; do

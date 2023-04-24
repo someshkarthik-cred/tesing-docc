@@ -29,7 +29,6 @@ jobs:
         file_extension() {
           # Use awk to extract the file extension
           extension=`expr "$1" : '.*\.\(.*\)'`
-          echo "file format we got $extension"
           echo "$extension"
         }
         
@@ -55,12 +54,14 @@ jobs:
           file_size=$(du -k "$file" | cut -f1)
           file_link="[Link](https://github.com/${{ github.repository }}/blob/${{ github.head_ref }}/$file)"
           encoded_url=$(urlencode "$file_link")
-          extension=$(file_extension "$file_link")
+          extension=$(file_extension "$file")
           if [[ "$file" =~ \.(wav|mp4|aiff)$ ]]; then
             export has_encountered_error=true
             echo "$file | $file_size | $extension | $encoded_url | UNSUPPORTED_FILE_FORMAT ❌" >> file_table.md
           else
-            if [ "$file_size" -gt 100 ]; then
+            expected_size_limit = $(size_limit $extension)
+            echo "Size limit received from fuction $expected_size_limit"
+            if [ "$file_size" -gt $expected_size_limit ]; then
               export has_encountered_error=true
               echo "$file | $file_size | $extension | $encoded_url | FAILED ❌" >> file_table.md
             else

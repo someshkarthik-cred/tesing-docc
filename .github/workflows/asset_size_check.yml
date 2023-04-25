@@ -14,7 +14,7 @@ jobs:
     - name: List changed files
       id: list_changed_files
       run: |
-        output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp4' '*.aiff' '*.mp3' '*.wav' '*.json')
+        output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp4' '*.aiff' '*.mp3' '*.wav' '*.json' '*.pdf' '*.svg')
         echo "output_files<<EOF" >> $GITHUB_ENV
         echo "$output_files" >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
@@ -32,7 +32,7 @@ jobs:
         
         size_limit() {
           case $1 in
-            m4a | mp3 )
+            m4a | mp3 | pdf )
               echo 100
               ;;
             json )
@@ -59,10 +59,11 @@ jobs:
         echo "--- | --- | --- | ---" >> file_table.md
         has_encountered_error=false
         
-        declare -a SUPPORTED_EXTENSIONS=("m4a" "mp3" "json")
+        declare -a SUPPORTED_EXTENSIONS=("m4a" "mp3" "json" "pdf")
         declare -r M4A=0
         declare -r MP3=1
         declare -r JSON=2
+        declare -r PDF=3
         
         IFS=$'\n'
         while read -r file; do
@@ -93,6 +94,7 @@ jobs:
         --- | ---
         Audio | \`${SUPPORTED_EXTENSIONS[$M4A]}\` , \`${SUPPORTED_EXTENSIONS[$MP3]}\`
         Lottie | \`${SUPPORTED_EXTENSIONS[$JSON]}\`
+        Images | \`${SUPPORTED_EXTENSIONS[$PDF]}\`
         "
         echo "$file_format_table" >> file_table.md
         echo "<!-- End of table -->" >> file_table.md
@@ -103,6 +105,7 @@ jobs:
           --- | ---
           \`${SUPPORTED_EXTENSIONS[$M4A]}\`, \`${SUPPORTED_EXTENSIONS[$MP3]}\` | 100KB
           \`${SUPPORTED_EXTENSIONS[$JSON]}\` | 250KB
+          \`${SUPPORTED_EXTENSIONS[$PDF]}\` | 100KB
         "
         echo "$size_table" >> file_table.md
         echo "<!-- End of table -->" >> file_table.md

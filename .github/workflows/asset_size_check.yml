@@ -14,7 +14,7 @@ jobs:
     - name: List changed files
       id: list_changed_files
       run: |
-        output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp4' '*.aiff' '*.mp3' '*.wav' '*.json' '*.pdf' '*.svg')
+        output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp4' '*.aiff' '*.mp3' '*.wav' '*.json' '*.pdf' '*.svg' '*.ttf' '*.otf')
         echo "output_files<<EOF" >> $GITHUB_ENV
         echo "$output_files" >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
@@ -32,7 +32,7 @@ jobs:
         
         size_limit() {
           case $1 in
-            m4a | mp3 | pdf )
+            m4a | mp3 | pdf | ttf | otf)
               echo 100
               ;;
             json )
@@ -59,12 +59,14 @@ jobs:
         echo "--- | --- | --- | ---" >> file_table.md
         has_encountered_error=false
         
-        declare -a SUPPORTED_EXTENSIONS=("m4a" "mp3" "json" "pdf")
+        declare -a SUPPORTED_EXTENSIONS=("m4a" "mp3" "json" "pdf" "ttf" "otf")
         declare -r M4A=0
         declare -r MP3=1
         declare -r JSON=2
         declare -r PDF=3
-        
+        declare -r TTF=4
+        declare -r OTF=5
+
         IFS=$'\n'
         while read -r file; do
           file_size=$(du -k "$file" | cut -f1)
@@ -94,7 +96,8 @@ jobs:
         --- | --- | ---
         Audio | \`${SUPPORTED_EXTENSIONS[$M4A]}\` , \`${SUPPORTED_EXTENSIONS[$MP3]}\` | 100KB
         Lottie | \`${SUPPORTED_EXTENSIONS[$JSON]}\` | 250KB
-        Images | \`${SUPPORTED_EXTENSIONS[$PDF]}\` | 100KB
+        Image | \`${SUPPORTED_EXTENSIONS[$PDF]}\` | 100KB
+        Font | \`${SUPPORTED_EXTENSIONS[$TTF]}\`, \`${SUPPORTED_EXTENSIONS[$OTF]}\` | 100KB 
         "
         echo "$file_format_table" >> file_table.md
         echo "<!-- End of table -->" >> file_table.md

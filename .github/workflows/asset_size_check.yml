@@ -101,11 +101,11 @@ jobs:
         
         echo check_status="$has_encountered_error" >> $GITHUB_OUTPUT
     - name: Comment on PR
-      uses: actions/github-script@v4
+      uses: actions/github-script@v6
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const { data: comments } = await github.issues.listComments({
+          const { data: comments } = await github.rest.issues.listComments({
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
@@ -120,14 +120,14 @@ jobs:
           } else {
             const message = `### Asset File Size Report\n\n${contents}`;
             if (comment) {
-              github.issues.updateComment({
+              github.rest.issues.updateComment({
                 comment_id: comment.id,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 body: message,
               });
             } else {
-              github.issues.createComment({
+              github.rest.issues.createComment({
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
                 repo: context.repo.repo,

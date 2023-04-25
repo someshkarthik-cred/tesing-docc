@@ -32,17 +32,13 @@ jobs:
           echo "$extension"
         }
         
-        # These thresshold are defines in KB (Kilo Bytes)
-        declare -r AUDIO_FILES_THRESSHOLD=100
-        declare -r JSON_FILES_THRESSHOLD=250
-        
-        function size_limit {
+        size_limit() {
           case $1 in
             m4a | mp3 )
-              return 100
+              echo 100
               ;;
             json )
-              return 250
+              echo 250
               ;;
             * )
               echo "🚨 Unknown format. please fix the script for any discrepency 🚨"
@@ -77,8 +73,7 @@ jobs:
           encoded_url=$(urlencode $file_link)
           extension=$(file_extension $file)
           if grep -qw "$extension" <<<"${SUPPORTED_EXTENSIONS[*]}"; then
-            size_limit $extension
-            expected_size_limit=$?
+            expected_size_limit=$(size_limit $extension)
             echo "Size limit received from fuction $expected_size_limit"
             if [ "$file_size" -gt $expected_size_limit ]; then
               export has_encountered_error=true
@@ -108,8 +103,8 @@ jobs:
         size_table="
           Extension | Thresshold
           --- | ---
-          \`${SUPPORTED_EXTENSIONS[$M4A]}\`, \`${SUPPORTED_EXTENSIONS[$MP3]}\` | $AUDIO_FILES_THRESSHOLD KB
-          \`${SUPPORTED_EXTENSIONS[$JSON]}\` | $JSON_FILES_THRESSHOLD KB
+          \`${SUPPORTED_EXTENSIONS[$M4A]}\`, \`${SUPPORTED_EXTENSIONS[$MP3]}\` | 100KB
+          \`${SUPPORTED_EXTENSIONS[$JSON]}\` | 250KB
         "
         echo "$size_table" >> file_table.md
         echo "<!-- End of table -->" >> file_table.md

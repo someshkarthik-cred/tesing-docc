@@ -22,12 +22,10 @@ jobs:
       id: bulky_files
       run: |
         urlencode() {
-          # Use awk to URL encode the input string
           echo "$1" | sed 's/ /%20/g'
         }
         
         file_extension() {
-          # Use awk to extract the file extension
           extension=`expr "$1" : '.*\.\(.*\)'`
           echo "$extension"
         }

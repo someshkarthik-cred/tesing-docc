@@ -14,7 +14,10 @@ jobs:
     - name: List changed files
       id: list_changed_files
       run: |
-        output_files=$(git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- '*.m4a' '*.mp4' '*.aiff' '*.mp3' '*.wav' '*.ogg' '*.json' '*.pdf' '*.svg' '*.ttf' '*.otf')
+        extension_str=$(python3 asset_extension_helper_script.py extension_list)
+        IFS=',' read -ra extension_list <<< "$extension_str"
+        git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} --diff-filter=ACM -- $(printf "*.%s\n" "${extension_list[@]}" | xargs)
+        unset IFS
         echo "output_files<<EOF" >> $GITHUB_ENV
         echo "$output_files" >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV

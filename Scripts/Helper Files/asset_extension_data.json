@@ -1,0 +1,25 @@
+{
+    "size_limit_table": [
+         {
+            "name": "Audio",
+            "supported_extensions": ["mp4", "m4a"],
+            "unsupported_extensions": ["aiff", "mp3", "wav", "ogg"],
+            "limit": 100
+        }, {
+            "name": "Lottie",
+            "supported_extensions": ["json"],
+            "unsupported_extensions": [],
+            "limit": 250
+        }, {
+            "name": "Image",
+            "supported_extensions": ["pdf"],
+            "unsupported_extensions": ["svg"],
+            "limit": 100
+        }, {
+            "name": "Font",
+            "supported_extensions": ["ttf", "otf"],
+            "unsupported_extensions": [],
+            "limit": 100
+        }
+    ]
+}

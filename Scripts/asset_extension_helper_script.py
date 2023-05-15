@@ -4,10 +4,10 @@ import os
 
 function = sys.argv[1]
 
-file_path = 'Helper Files/asset_extension_data.json'
-absolute_path = os.path.abspath(file_path)
+file_path = 'Scripts/Helper Files/asset_extension_data.json'
+#absolute_path = os.path.abspath(file_path)
 
-with open(absolute_path, 'r') as f:
+with open(file_path, 'r') as f:
     extension_data = json.load(f)
 
 if function == "extension_list":

@@ -3,7 +3,7 @@ import json
 
 function = sys.argv[1]
 
-with open('asset_extension_data.json', 'r') as f:
+with open('Helper Files/asset_extension_data.json', 'r') as f:
     extension_data = json.load(f)
 
 if function == "extension_list":

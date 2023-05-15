@@ -33,19 +33,19 @@ jobs:
           echo "$extension"
         }
         
-        size_limit() {
-          case $1 in
-            m4a | mp3 | pdf | ttf | otf)
-              echo 100
-              ;;
-            json )
-              echo 250
-              ;;
-            * )
-              echo "🚨 Unknown Format. please fix the script for any discrepency 🚨"
-              exit 1
-          esac
-        }
+        # size_limit() {
+        #   case $1 in
+        #     m4a | mp3 | pdf | ttf | otf)
+        #       echo 100
+        #       ;;
+        #     json )
+        #       echo 250
+        #       ;;
+        #     * )
+        #       echo "🚨 Unknown Format. please fix the script for any discrepency 🚨"
+        #       exit 1
+        #   esac
+        # }
         
         filtered_asset_files="${{ env.output_files }}"
         
@@ -62,13 +62,16 @@ jobs:
         echo "--- | --- | --- | ---" >> file_table.md
         has_encountered_error=false
         
-        declare -a SUPPORTED_EXTENSIONS=("m4a" "mp3" "json" "pdf" "ttf" "otf")
-        declare -r M4A=0
-        declare -r MP3=1
-        declare -r JSON=2
-        declare -r PDF=3
-        declare -r TTF=4
-        declare -r OTF=5
+        supported_extensions_str=$(python3 Scripts/asset_extension_helper_script.py supported_extensions)
+        IFS=',' read -ra SUPPORTED_EXTENSIONS <<< "$supported_extensions_str"
+        unset IFS
+        # declare -a SUPPORTED_EXTENSIONS=("m4a" "mp3" "json" "pdf" "ttf" "otf")
+        # declare -r M4A=0
+        # declare -r MP3=1
+        # declare -r JSON=2
+        # declare -r PDF=3
+        # declare -r TTF=4
+        # declare -r OTF=5
 
         IFS=$'\n'
         while read -r file; do
@@ -77,7 +80,7 @@ jobs:
           encoded_url=$(urlencode $file_link)
           extension=$(file_extension $file)
           if grep -qw "$extension" <<<"${SUPPORTED_EXTENSIONS[*]}"; then
-            expected_size_limit=$(size_limit $extension)
+            expected_size_limit=$(python3 Scripts/asset_extension_helper_script.py size_limit $extension)
             echo "Size limit received from fuction $expected_size_limit"
             if [ "$file_size" -gt $expected_size_limit ]; then
               export has_encountered_error=true
@@ -94,14 +97,15 @@ jobs:
         echo "<!-- End of table -->" >> file_table.md
         
         echo "### Supported File Formats And Threshold" >> file_table.md
-        file_format_table="
-        File type | Format | Threshold
-        --- | --- | ---
-        Audio | \`${SUPPORTED_EXTENSIONS[$M4A]}\` , \`${SUPPORTED_EXTENSIONS[$MP3]}\` | 100KB
-        Lottie | \`${SUPPORTED_EXTENSIONS[$JSON]}\` | 250KB
-        Image | \`${SUPPORTED_EXTENSIONS[$PDF]}\` | 100KB
-        Font | \`${SUPPORTED_EXTENSIONS[$TTF]}\`, \`${SUPPORTED_EXTENSIONS[$OTF]}\` | 100KB 
-        "
+        file_format_table=$(python3 Scripts/asset_extension_helper_script.py supported_extension_table)
+        # file_format_table="
+        # File type | Format | Threshold
+        # --- | --- | ---
+        # Audio | \`${SUPPORTED_EXTENSIONS[$M4A]}\` , \`${SUPPORTED_EXTENSIONS[$MP3]}\` | 100KB
+        # Lottie | \`${SUPPORTED_EXTENSIONS[$JSON]}\` | 250KB
+        # Image | \`${SUPPORTED_EXTENSIONS[$PDF]}\` | 100KB
+        # Font | \`${SUPPORTED_EXTENSIONS[$TTF]}\`, \`${SUPPORTED_EXTENSIONS[$OTF]}\` | 100KB 
+        # "
         echo "$file_format_table" >> file_table.md
         echo "<!-- End of table -->" >> file_table.md
         

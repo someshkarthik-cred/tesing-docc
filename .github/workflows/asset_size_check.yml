@@ -1,0 +1,11 @@
+name: Check File Size
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  check_asset_size:
+    uses: someshkarthik-cred/analyse-asset-size/.github/workflows/asset_size_checker.yml@main #pointed to main and
+    with: 
+      file_url: 'Scripts/Helper Files/asset_extension_data.json'
+    

@@ -6,5 +6,8 @@
     "base": {
       "ref": "main"
     }
+  },
+  "inputs": {
+    "file_url": "Scripts/Helper Files/asset_extension_data.json"
   }
 }
